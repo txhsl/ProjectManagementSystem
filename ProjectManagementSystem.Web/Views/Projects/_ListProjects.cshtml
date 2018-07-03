@@ -1,0 +1,24 @@
+﻿@model IEnumerable<ProjectManagementSystem.Projects.Dto.ProjectDto>
+<div>
+    <ul class="list-group">
+        @foreach (var project in Model)
+        {
+            <li class="list-group-item">
+                <div class="btn-group pull-right">
+                    <button type="button" class="btn btn-info" onclick="editTask(@project.Id);">Edit</button>
+                    <button type="button" class="btn btn-success" onclick="deleteTask(@project.Id);">Delete</button>
+                </div>
+                <div class="media">
+                    <a class="media-left" href="#">
+                        <!--<i class="fa @project.GetTaskLable() fa-3x"></i>-->
+                    </a>
+                    <div class="media-body">
+                        <h4 class="media-heading">@project.Name</h4>
+                        <p class="text-info">Principal: @project.TeamLeaderName</p>
+                        <span class="text-muted">DeliverDate: @project.DeliverTime.ToString("yyyy-MM-dd HH:mm:ss")</span>
+                    </div>
+                </div>
+            </li>
+        }
+    </ul>
+</div>

@@ -5,12 +5,12 @@
         {
             <li class="list-group-item">
                 <div class="btn-group pull-right">
-                    <button type="button" class="btn btn-info" onclick="editTask(@project.Id);">Edit</button>
-                    <button type="button" class="btn btn-success" onclick="deleteTask(@project.Id);">Delete</button>
+                    <button type="button" class="btn btn-info" onclick="editProject(@project.Id);">Edit</button>
+                    <button type="button" class="btn btn-success" onclick="deleteProject(@project.Id);">Delete</button>
                 </div>
                 <div class="media">
                     <a class="media-left" href="#">
-                        <!--<i class="fa @project.GetTaskLable() fa-3x"></i>-->
+                        <i class="fa @project.GetTaskLable() fa-3x"></i>
                     </a>
                     <div class="media-body">
                         <h4 class="media-heading">@project.Name</h4>

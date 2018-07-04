@@ -32,5 +32,26 @@ namespace ProjectManagementSystem.Projects.Dto
         {
             return null;
         }
+
+        /// <summary>
+        /// 根据任务状态，获取定义的css样式
+        /// </summary>
+        /// <returns></returns>
+        public string GetTaskLable()
+        {
+            string style = "";
+
+            switch (IsFinished)
+            {
+                case true:
+                    style = "fa-spinner fa-spin ";
+                    break;
+                case false:
+                    style = "fa-check-circle ";
+                    break;
+            }
+            return style;
+
+        }
     }
 }

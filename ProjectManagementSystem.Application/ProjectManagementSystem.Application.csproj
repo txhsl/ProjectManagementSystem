@@ -237,6 +237,7 @@
     <Compile Include="Sessions\ISessionAppService.cs" />
     <Compile Include="Sessions\SessionAppService.cs" />
     <Compile Include="Users\UserAppService.cs" />
+    <Compile Include="Users\UserDtoMapping.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

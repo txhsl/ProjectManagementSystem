@@ -128,5 +128,16 @@ namespace ProjectManagementSystem.Users
         {
             identityResult.CheckErrors(LocalizationManager);
         }
+
+        public async Task<PagedResultDto<User>> GetUsers()
+        {
+            var users = Repository.GetAll().ToList();
+
+            return new PagedResultDto<User>()
+            {
+                TotalCount = users.Count(),
+                Items = users
+            };
+        }
     }
 }

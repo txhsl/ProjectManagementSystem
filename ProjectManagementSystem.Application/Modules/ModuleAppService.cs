@@ -45,9 +45,19 @@ namespace ProjectManagementSystem.Projects
                 query = query.Where(t => t.IsFinished == input.IsFinished);
             }
 
+            var list = query.ToList();
+            foreach (var module in list)
+            {
+                if (module.MemberId.HasValue)
+                    module.Member = _userRepository.Get(ObjectMapper.Map<long>(module.MemberId));
+
+                if (module.ProjectId.HasValue)
+                    module.Project = _projectRepository.Get(ObjectMapper.Map<int>(module.ProjectId));
+            }
+
             return new ModuleSearchOutputDto
             {
-                Modules = Mapper.Map<List<ModuleDto>>(query.ToList())
+                Modules = Mapper.Map<List<ModuleDto>>(list)
             };
         }
 
@@ -124,11 +134,15 @@ namespace ProjectManagementSystem.Projects
             if (input.MemberId.HasValue)
             {
                 module.MemberId = input.MemberId;
+                var user = _userRepository.Get(ObjectMapper.Map<long>(input.MemberId));
+                module.Member = user;
             }
 
             if (input.ProjectId.HasValue)
             {
                 module.ProjectId = input.ProjectId;
+                var project = _projectRepository.Get(ObjectMapper.Map<int>(input.ProjectId));
+                module.Project = project;
             }
         }
     }

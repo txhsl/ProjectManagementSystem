@@ -37,9 +37,16 @@ namespace ProjectManagementSystem.Projects
                 query = query.Where(t => t.IsFinished == input.IsFinished);
             }
 
+            var list = query.ToList();
+            foreach(var project in list)
+            {
+                if(project.TeamLeaderId.HasValue)
+                    project.TeamLeader = _userRepository.Get(ObjectMapper.Map<long>(project.TeamLeaderId));
+            }
+
             return new ProjectSearchOutputDto
             {
-                Projects = Mapper.Map<List<ProjectDto>>(query.ToList())
+                Projects = Mapper.Map<List<ProjectDto>>(list)
             };
         }
 
@@ -107,6 +114,8 @@ namespace ProjectManagementSystem.Projects
             if (input.TeamLeaderId.HasValue)
             {
                 project.TeamLeaderId = input.TeamLeaderId;
+                var user = _userRepository.Get(ObjectMapper.Map<long>(input.TeamLeaderId));
+                project.TeamLeader = user;
             }
         }
     }

@@ -1,6 +1,7 @@
 ﻿using Abp.AutoMapper;
 using Abp.Domain.Repositories;
 using AutoMapper;
+using ProjectManagementSystem.Authorization.Users;
 using ProjectManagementSystem.Projects.Dto;
 using System;
 using System.Collections.Generic;
@@ -14,10 +15,12 @@ namespace ProjectManagementSystem.Projects
     {
 
         private readonly IRepository<Project> _projectRepository;
+        private readonly IRepository<User, long> _userRepository;
 
-        public ProjectAppService(IRepository<Project> projectRepository)
+        public ProjectAppService(IRepository<Project> projectRepository, IRepository<User, long> userRepository)
         {
             _projectRepository = projectRepository;
+            _userRepository = userRepository;
         }
 
         public ProjectSearchOutputDto SearchProjects(ProjectSearchInputDto input)
@@ -49,8 +52,15 @@ namespace ProjectManagementSystem.Projects
                 Name = input.Name,
                 Description = input.Description,
                 StartTime = input.StartTime,
-                DeliverTime = input.DeliverTime
+                DeliverTime = input.DeliverTime,
+                TeamLeaderId = input.TeamLeaderId
             };
+
+            if (input.TeamLeaderId.HasValue)
+            {
+                var user = _userRepository.Get(ObjectMapper.Map<long>(input.TeamLeaderId));
+                project.TeamLeader = user;
+            }
 
             return _projectRepository.InsertAndGetId(project);
         }

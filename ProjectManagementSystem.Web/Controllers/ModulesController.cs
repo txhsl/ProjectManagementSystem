@@ -58,7 +58,7 @@ namespace ProjectManagementSystem.Web.Controllers
             var userList = _userAppService.GetUsers().Result;
             ViewBag.MemberId = new SelectList(userList.Items, "Id", "FullName", updateModuleDto.MemberId);
             var projectList = _projectAppService.SearchProjects(new Projects.Dto.ProjectSearchInputDto { });
-            ViewBag.ProjectId = new SelectList(projectList.Projects, "Id", "Name");
+            ViewBag.ProjectId = new SelectList(projectList.Projects, "Id", "Name", updateModuleDto.ProjectId);
 
             return PartialView("_EditModule", updateModuleDto);
         }

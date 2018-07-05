@@ -1,6 +1,7 @@
 ﻿using Abp.AutoMapper;
 using Abp.Domain.Repositories;
 using AutoMapper;
+using ProjectManagementSystem.Authorization.Users;
 using ProjectManagementSystem.Modules;
 using ProjectManagementSystem.Modules.Dto;
 using System;
@@ -15,10 +16,14 @@ namespace ProjectManagementSystem.Projects
     {
 
         private readonly IRepository<Module> _moduleRepository;
+        private readonly IRepository<Project> _projectRepository;
+        private readonly IRepository<User, long> _userRepository;
 
-        public ModuleAppService(IRepository<Module> moduleRepository)
+        public ModuleAppService(IRepository<Module> moduleRepository, IRepository<Project> projectRepository, IRepository<User, long> userRepository)
         {
             _moduleRepository = moduleRepository;
+            _projectRepository = projectRepository;
+            _userRepository = userRepository;
         }
 
         public ModuleSearchOutputDto SearchModules(ModuleSearchInputDto input)
@@ -55,8 +60,24 @@ namespace ProjectManagementSystem.Projects
                 Name = input.Name,
                 Description = input.Description,
                 StartTime = input.StartTime,
-                DeliverTime = input.DeliverTime
+                DeliverTime = input.DeliverTime,
+                TechStack = input.TechStack,
+                Level = input.Level,
+                MemberId = input.MemberId,
+                ProjectId = input.ProjectId
             };
+
+            if (input.MemberId.HasValue)
+            {
+                var user = _userRepository.Get(ObjectMapper.Map<long>(input.MemberId));
+                module.Member = user;
+            }
+
+            if (input.ProjectId.HasValue)
+            {
+                var project = _projectRepository.Get(ObjectMapper.Map<int>(input.ProjectId));
+                module.Project = project;
+            }
 
             return _moduleRepository.InsertAndGetId(module);
         }

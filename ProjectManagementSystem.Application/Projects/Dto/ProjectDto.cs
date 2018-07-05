@@ -43,10 +43,10 @@ namespace ProjectManagementSystem.Projects.Dto
 
             switch (IsFinished)
             {
-                case true:
+                case false:
                     style = "fa-spinner fa-spin ";
                     break;
-                case false:
+                case true:
                     style = "fa-check-circle ";
                     break;
             }

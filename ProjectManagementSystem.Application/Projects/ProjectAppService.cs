@@ -1,6 +1,8 @@
-﻿using Abp.AutoMapper;
+﻿using Abp.Authorization;
+using Abp.AutoMapper;
 using Abp.Domain.Repositories;
 using AutoMapper;
+using ProjectManagementSystem.Authorization;
 using ProjectManagementSystem.Authorization.Users;
 using ProjectManagementSystem.Projects.Dto;
 using System;
@@ -50,6 +52,7 @@ namespace ProjectManagementSystem.Projects
             };
         }
 
+        [AbpAuthorize(PermissionNames.Pages_Projects)]
         public int CreateProject(CreateProjectDto input)
         {
             Logger.Info("Creating a project for input: " + input);
@@ -72,6 +75,7 @@ namespace ProjectManagementSystem.Projects
             return _projectRepository.InsertAndGetId(project);
         }
 
+        [AbpAuthorize(PermissionNames.Pages_Projects)]
         public void DeleteProject(int projectId)
         {
             var project = _projectRepository.Get(projectId);
@@ -103,6 +107,7 @@ namespace ProjectManagementSystem.Projects
             return project.MapTo<ProjectDto>();
         }
 
+        [AbpAuthorize(PermissionNames.Pages_Projects)]
         public void UpdateProject(UpdateProjectDto input)
         {
             Logger.Info("Updating a project for input: " + input);
@@ -110,6 +115,11 @@ namespace ProjectManagementSystem.Projects
             var project = _projectRepository.Get(input.Id);
 
             project.State = input.State;
+
+            project.Name = input.Name;
+            project.Description = input.Description;
+            project.StartTime = input.StartTime;
+            project.DeliverTime = input.DeliverTime;
             
             if (input.TeamLeaderId.HasValue)
             {

@@ -54,6 +54,10 @@ namespace ProjectManagementSystem.Migrations.SeedData
                         });
                 }
 
+                //Grant all project/module permissions
+                var projectPermissions = PermissionFinder.GetAllPermissions(new ProjectModuleAuthorizationProvider()).ToList();
+                permissions.AddRange(projectPermissions);
+
                 _context.SaveChanges();
             }
 

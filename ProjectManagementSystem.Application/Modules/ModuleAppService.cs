@@ -1,6 +1,9 @@
-﻿using Abp.AutoMapper;
+﻿using Abp.Authorization;
+using Abp.AutoMapper;
 using Abp.Domain.Repositories;
+using Abp.Threading;
 using AutoMapper;
+using ProjectManagementSystem.Authorization;
 using ProjectManagementSystem.Authorization.Users;
 using ProjectManagementSystem.Modules;
 using ProjectManagementSystem.Modules.Dto;
@@ -61,6 +64,7 @@ namespace ProjectManagementSystem.Projects
             };
         }
 
+        [AbpAuthorize(PermissionNames.Pages_Modules)]
         public int CreateModule(CreateModuleDto input)
         {
             Logger.Info("Creating a module for input: " + input);
@@ -92,6 +96,7 @@ namespace ProjectManagementSystem.Projects
             return _moduleRepository.InsertAndGetId(module);
         }
 
+        [AbpAuthorize(PermissionNames.Pages_Modules)]
         public void DeleteModule(int moduleId)
         {
             var module = _moduleRepository.Get(moduleId);
@@ -123,13 +128,30 @@ namespace ProjectManagementSystem.Projects
             return module.MapTo<ModuleDto>();
         }
 
+        [AbpAuthorize(PermissionNames.Pages_Modules_EditState)]
         public void UpdateModule(UpdateModuleDto input)
         {
             Logger.Info("Updating a module for input: " + input);
 
             var module = _moduleRepository.Get(input.Id);
+            var currentUser = AsyncHelper.RunSync(this.GetCurrentUserAsync);
 
             module.State = input.State;
+
+            //Check Permission for TeamLeader
+            if (input.Name != module.Name || input.Description != module.Description || input.Level != module.Level || input.StartTime != module.StartTime 
+                || input.DeliverTime != module.DeliverTime || input.TechStack != module.TechStack || input.MemberId != module.MemberId
+                || input.ProjectId != module.ProjectId)
+            {
+                PermissionChecker.Authorize(PermissionNames.Pages_Modules_EditOthers);
+            }
+
+            module.Name = input.Name;
+            module.Description = input.Description;
+            module.Level = input.Level;
+            module.StartTime = input.StartTime;
+            module.DeliverTime = input.DeliverTime;
+            module.TechStack = input.TechStack;
 
             if (input.MemberId.HasValue)
             {

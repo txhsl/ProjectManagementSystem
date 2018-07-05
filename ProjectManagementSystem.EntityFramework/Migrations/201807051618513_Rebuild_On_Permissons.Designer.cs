@@ -7,13 +7,13 @@ namespace ProjectManagementSystem.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class AbpZero_Initial : IMigrationMetadata
+    public sealed partial class Rebuild_On_Permissons : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(AbpZero_Initial));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Rebuild_On_Permissons));
         
         string IMigrationMetadata.Id
         {
-            get { return "201807030635551_AbpZero_Initial"; }
+            get { return "201807051618513_Rebuild_On_Permissons"; }
         }
         
         string IMigrationMetadata.Source

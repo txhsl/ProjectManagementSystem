@@ -179,6 +179,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Authorization\ProjectModuleAuthorizationProvider.cs" />
     <Compile Include="IRepositories\IModuleRepository.cs" />
     <Compile Include="IRepositories\IProjectRepository.cs" />
     <Compile Include="Modules\Module.cs" />

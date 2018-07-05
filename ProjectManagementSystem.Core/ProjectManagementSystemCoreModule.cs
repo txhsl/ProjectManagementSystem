@@ -41,6 +41,7 @@ namespace ProjectManagementSystem
             AppRoleConfig.Configure(Configuration.Modules.Zero().RoleManagement);
 
             Configuration.Authorization.Providers.Add<ProjectManagementSystemAuthorizationProvider>();
+            Configuration.Authorization.Providers.Add<ProjectModuleAuthorizationProvider>();
 
             Configuration.Settings.Providers.Add<AppSettingProvider>();
 

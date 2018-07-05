@@ -207,25 +207,9 @@
     <Compile Include="EntityFramework\Repositories\ModuleRepository.cs" />
     <Compile Include="EntityFramework\Repositories\ProjectManagementSystemRepositoryBase.cs" />
     <Compile Include="EntityFramework\Repositories\ProjectRepository.cs" />
-    <Compile Include="Migrations\201807030635551_AbpZero_Initial.cs" />
-    <Compile Include="Migrations\201807030635551_AbpZero_Initial.Designer.cs">
-      <DependentUpon>201807030635551_AbpZero_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807030711235_Add_Entity.cs" />
-    <Compile Include="Migrations\201807030711235_Add_Entity.Designer.cs">
-      <DependentUpon>201807030711235_Add_Entity.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807030737588_Entity_Modify.cs" />
-    <Compile Include="Migrations\201807030737588_Entity_Modify.Designer.cs">
-      <DependentUpon>201807030737588_Entity_Modify.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807030751398_Entity_Modify_MaxLength.cs" />
-    <Compile Include="Migrations\201807030751398_Entity_Modify_MaxLength.Designer.cs">
-      <DependentUpon>201807030751398_Entity_Modify_MaxLength.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201807050719421_State_Modify.cs" />
-    <Compile Include="Migrations\201807050719421_State_Modify.Designer.cs">
-      <DependentUpon>201807050719421_State_Modify.cs</DependentUpon>
+    <Compile Include="Migrations\201807051618513_Rebuild_On_Permissons.cs" />
+    <Compile Include="Migrations\201807051618513_Rebuild_On_Permissons.Designer.cs">
+      <DependentUpon>201807051618513_Rebuild_On_Permissons.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\AbpZeroDbMigrator.cs" />
     <Compile Include="Migrations\Configuration.cs" />
@@ -252,20 +236,8 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201807030635551_AbpZero_Initial.resx">
-      <DependentUpon>201807030635551_AbpZero_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807030711235_Add_Entity.resx">
-      <DependentUpon>201807030711235_Add_Entity.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807030737588_Entity_Modify.resx">
-      <DependentUpon>201807030737588_Entity_Modify.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807030751398_Entity_Modify_MaxLength.resx">
-      <DependentUpon>201807030751398_Entity_Modify_MaxLength.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201807050719421_State_Modify.resx">
-      <DependentUpon>201807050719421_State_Modify.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201807051618513_Rebuild_On_Permissons.resx">
+      <DependentUpon>201807051618513_Rebuild_On_Permissons.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

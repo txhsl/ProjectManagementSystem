@@ -5,7 +5,7 @@ namespace ProjectManagementSystem.Migrations
     using System.Data.Entity.Infrastructure.Annotations;
     using System.Data.Entity.Migrations;
     
-    public partial class AbpZero_Initial : DbMigration
+    public partial class Rebuild_On_Permissons : DbMigration
     {
         public override void Up()
         {
@@ -144,129 +144,27 @@ namespace ProjectManagementSystem.Migrations
                 .PrimaryKey(t => t.Id);
             
             CreateTable(
-                "dbo.AbpNotifications",
-                c => new
-                    {
-                        Id = c.Guid(nullable: false),
-                        NotificationName = c.String(nullable: false, maxLength: 96, storeType: "nvarchar"),
-                        Data = c.String(unicode: false),
-                        DataTypeName = c.String(maxLength: 512, storeType: "nvarchar"),
-                        EntityTypeName = c.String(maxLength: 250, storeType: "nvarchar"),
-                        EntityTypeAssemblyQualifiedName = c.String(maxLength: 512, storeType: "nvarchar"),
-                        EntityId = c.String(maxLength: 96, storeType: "nvarchar"),
-                        Severity = c.Byte(nullable: false),
-                        UserIds = c.String(unicode: false),
-                        ExcludedUserIds = c.String(unicode: false),
-                        TenantIds = c.String(unicode: false),
-                        CreationTime = c.DateTime(nullable: false, precision: 0),
-                        CreatorUserId = c.Long(),
-                    })
-                .PrimaryKey(t => t.Id);
-            
-            CreateTable(
-                "dbo.AbpNotificationSubscriptions",
-                c => new
-                    {
-                        Id = c.Guid(nullable: false),
-                        TenantId = c.Int(),
-                        UserId = c.Long(nullable: false),
-                        NotificationName = c.String(maxLength: 96, storeType: "nvarchar"),
-                        EntityTypeName = c.String(maxLength: 250, storeType: "nvarchar"),
-                        EntityTypeAssemblyQualifiedName = c.String(maxLength: 512, storeType: "nvarchar"),
-                        EntityId = c.String(maxLength: 96, storeType: "nvarchar"),
-                        CreationTime = c.DateTime(nullable: false, precision: 0),
-                        CreatorUserId = c.Long(),
-                    },
-                annotations: new Dictionary<string, object>
-                {
-                    { "DynamicFilter_NotificationSubscriptionInfo_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
-                })
-                .PrimaryKey(t => t.Id)
-                .Index(t => new { t.NotificationName, t.EntityTypeName, t.EntityId, t.UserId });
-            
-            CreateTable(
-                "dbo.AbpOrganizationUnits",
-                c => new
-                    {
-                        Id = c.Long(nullable: false, identity: true),
-                        TenantId = c.Int(),
-                        ParentId = c.Long(),
-                        Code = c.String(nullable: false, maxLength: 95, storeType: "nvarchar"),
-                        DisplayName = c.String(nullable: false, maxLength: 128, storeType: "nvarchar"),
-                        IsDeleted = c.Boolean(nullable: false),
-                        DeleterUserId = c.Long(),
-                        DeletionTime = c.DateTime(precision: 0),
-                        LastModificationTime = c.DateTime(precision: 0),
-                        LastModifierUserId = c.Long(),
-                        CreationTime = c.DateTime(nullable: false, precision: 0),
-                        CreatorUserId = c.Long(),
-                    },
-                annotations: new Dictionary<string, object>
-                {
-                    { "DynamicFilter_OrganizationUnit_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
-                    { "DynamicFilter_OrganizationUnit_SoftDelete", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
-                })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.AbpOrganizationUnits", t => t.ParentId)
-                .Index(t => t.ParentId);
-            
-            CreateTable(
-                "dbo.AbpPermissions",
-                c => new
-                    {
-                        Id = c.Long(nullable: false, identity: true),
-                        TenantId = c.Int(),
-                        Name = c.String(nullable: false, maxLength: 128, storeType: "nvarchar"),
-                        IsGranted = c.Boolean(nullable: false),
-                        CreationTime = c.DateTime(nullable: false, precision: 0),
-                        CreatorUserId = c.Long(),
-                        RoleId = c.Int(),
-                        UserId = c.Long(),
-                        Discriminator = c.String(nullable: false, maxLength: 128, storeType: "nvarchar"),
-                    },
-                annotations: new Dictionary<string, object>
-                {
-                    { "DynamicFilter_PermissionSetting_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
-                    { "DynamicFilter_RolePermissionSetting_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
-                    { "DynamicFilter_UserPermissionSetting_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
-                })
-                .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.AbpUsers", t => t.UserId, cascadeDelete: true)
-                .ForeignKey("dbo.AbpRoles", t => t.RoleId, cascadeDelete: true)
-                .Index(t => t.RoleId)
-                .Index(t => t.UserId);
-            
-            CreateTable(
-                "dbo.AbpRoles",
+                "dbo.Modules",
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
-                        Description = c.String(maxLength: 5000, storeType: "nvarchar"),
-                        TenantId = c.Int(),
+                        ProjectId = c.Int(),
+                        MemberId = c.Long(),
                         Name = c.String(nullable: false, maxLength: 32, storeType: "nvarchar"),
-                        DisplayName = c.String(nullable: false, maxLength: 64, storeType: "nvarchar"),
-                        IsStatic = c.Boolean(nullable: false),
-                        IsDefault = c.Boolean(nullable: false),
-                        IsDeleted = c.Boolean(nullable: false),
-                        DeleterUserId = c.Long(),
-                        DeletionTime = c.DateTime(precision: 0),
-                        LastModificationTime = c.DateTime(precision: 0),
-                        LastModifierUserId = c.Long(),
+                        Description = c.String(nullable: false, maxLength: 64, storeType: "nvarchar"),
+                        TechStack = c.String(nullable: false, maxLength: 32, storeType: "nvarchar"),
+                        StartTime = c.DateTime(nullable: false, precision: 0),
+                        DeliverTime = c.DateTime(nullable: false, precision: 0),
+                        Level = c.Int(nullable: false),
+                        State = c.Byte(nullable: false),
                         CreationTime = c.DateTime(nullable: false, precision: 0),
-                        CreatorUserId = c.Long(),
-                    },
-                annotations: new Dictionary<string, object>
-                {
-                    { "DynamicFilter_Role_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
-                    { "DynamicFilter_Role_SoftDelete", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
-                })
+                        LastModificationTime = c.DateTime(precision: 0),
+                    })
                 .PrimaryKey(t => t.Id)
-                .ForeignKey("dbo.AbpUsers", t => t.CreatorUserId)
-                .ForeignKey("dbo.AbpUsers", t => t.DeleterUserId)
-                .ForeignKey("dbo.AbpUsers", t => t.LastModifierUserId)
-                .Index(t => t.DeleterUserId)
-                .Index(t => t.LastModifierUserId)
-                .Index(t => t.CreatorUserId);
+                .ForeignKey("dbo.AbpUsers", t => t.MemberId)
+                .ForeignKey("dbo.Projects", t => t.ProjectId)
+                .Index(t => t.ProjectId)
+                .Index(t => t.MemberId);
             
             CreateTable(
                 "dbo.AbpUsers",
@@ -352,6 +250,32 @@ namespace ProjectManagementSystem.Migrations
                 .Index(t => t.UserId);
             
             CreateTable(
+                "dbo.AbpPermissions",
+                c => new
+                    {
+                        Id = c.Long(nullable: false, identity: true),
+                        TenantId = c.Int(),
+                        Name = c.String(nullable: false, maxLength: 128, storeType: "nvarchar"),
+                        IsGranted = c.Boolean(nullable: false),
+                        CreationTime = c.DateTime(nullable: false, precision: 0),
+                        CreatorUserId = c.Long(),
+                        UserId = c.Long(),
+                        RoleId = c.Int(),
+                        Discriminator = c.String(nullable: false, maxLength: 128, storeType: "nvarchar"),
+                    },
+                annotations: new Dictionary<string, object>
+                {
+                    { "DynamicFilter_PermissionSetting_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
+                    { "DynamicFilter_RolePermissionSetting_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
+                    { "DynamicFilter_UserPermissionSetting_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
+                })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.AbpUsers", t => t.UserId, cascadeDelete: true)
+                .ForeignKey("dbo.AbpRoles", t => t.RoleId, cascadeDelete: true)
+                .Index(t => t.UserId)
+                .Index(t => t.RoleId);
+            
+            CreateTable(
                 "dbo.AbpUserRoles",
                 c => new
                     {
@@ -391,6 +315,123 @@ namespace ProjectManagementSystem.Migrations
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.AbpUsers", t => t.UserId)
                 .Index(t => t.UserId);
+            
+            CreateTable(
+                "dbo.Projects",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        TeamLeaderId = c.Long(),
+                        Name = c.String(nullable: false, maxLength: 32, storeType: "nvarchar"),
+                        Description = c.String(nullable: false, maxLength: 64, storeType: "nvarchar"),
+                        StartTime = c.DateTime(nullable: false, precision: 0),
+                        DeliverTime = c.DateTime(nullable: false, precision: 0),
+                        State = c.Byte(nullable: false),
+                        CreationTime = c.DateTime(nullable: false, precision: 0),
+                        LastModificationTime = c.DateTime(precision: 0),
+                    })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.AbpUsers", t => t.TeamLeaderId)
+                .Index(t => t.TeamLeaderId);
+            
+            CreateTable(
+                "dbo.AbpNotifications",
+                c => new
+                    {
+                        Id = c.Guid(nullable: false),
+                        NotificationName = c.String(nullable: false, maxLength: 96, storeType: "nvarchar"),
+                        Data = c.String(unicode: false),
+                        DataTypeName = c.String(maxLength: 512, storeType: "nvarchar"),
+                        EntityTypeName = c.String(maxLength: 250, storeType: "nvarchar"),
+                        EntityTypeAssemblyQualifiedName = c.String(maxLength: 512, storeType: "nvarchar"),
+                        EntityId = c.String(maxLength: 96, storeType: "nvarchar"),
+                        Severity = c.Byte(nullable: false),
+                        UserIds = c.String(unicode: false),
+                        ExcludedUserIds = c.String(unicode: false),
+                        TenantIds = c.String(unicode: false),
+                        CreationTime = c.DateTime(nullable: false, precision: 0),
+                        CreatorUserId = c.Long(),
+                    })
+                .PrimaryKey(t => t.Id);
+            
+            CreateTable(
+                "dbo.AbpNotificationSubscriptions",
+                c => new
+                    {
+                        Id = c.Guid(nullable: false),
+                        TenantId = c.Int(),
+                        UserId = c.Long(nullable: false),
+                        NotificationName = c.String(maxLength: 96, storeType: "nvarchar"),
+                        EntityTypeName = c.String(maxLength: 250, storeType: "nvarchar"),
+                        EntityTypeAssemblyQualifiedName = c.String(maxLength: 512, storeType: "nvarchar"),
+                        EntityId = c.String(maxLength: 96, storeType: "nvarchar"),
+                        CreationTime = c.DateTime(nullable: false, precision: 0),
+                        CreatorUserId = c.Long(),
+                    },
+                annotations: new Dictionary<string, object>
+                {
+                    { "DynamicFilter_NotificationSubscriptionInfo_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
+                })
+                .PrimaryKey(t => t.Id)
+                .Index(t => new { t.NotificationName, t.EntityTypeName, t.EntityId, t.UserId });
+            
+            CreateTable(
+                "dbo.AbpOrganizationUnits",
+                c => new
+                    {
+                        Id = c.Long(nullable: false, identity: true),
+                        TenantId = c.Int(),
+                        ParentId = c.Long(),
+                        Code = c.String(nullable: false, maxLength: 95, storeType: "nvarchar"),
+                        DisplayName = c.String(nullable: false, maxLength: 128, storeType: "nvarchar"),
+                        IsDeleted = c.Boolean(nullable: false),
+                        DeleterUserId = c.Long(),
+                        DeletionTime = c.DateTime(precision: 0),
+                        LastModificationTime = c.DateTime(precision: 0),
+                        LastModifierUserId = c.Long(),
+                        CreationTime = c.DateTime(nullable: false, precision: 0),
+                        CreatorUserId = c.Long(),
+                    },
+                annotations: new Dictionary<string, object>
+                {
+                    { "DynamicFilter_OrganizationUnit_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
+                    { "DynamicFilter_OrganizationUnit_SoftDelete", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
+                })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.AbpOrganizationUnits", t => t.ParentId)
+                .Index(t => t.ParentId);
+            
+            CreateTable(
+                "dbo.AbpRoles",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        Description = c.String(maxLength: 5000, storeType: "nvarchar"),
+                        TenantId = c.Int(),
+                        Name = c.String(nullable: false, maxLength: 32, storeType: "nvarchar"),
+                        DisplayName = c.String(nullable: false, maxLength: 64, storeType: "nvarchar"),
+                        IsStatic = c.Boolean(nullable: false),
+                        IsDefault = c.Boolean(nullable: false),
+                        IsDeleted = c.Boolean(nullable: false),
+                        DeleterUserId = c.Long(),
+                        DeletionTime = c.DateTime(precision: 0),
+                        LastModificationTime = c.DateTime(precision: 0),
+                        LastModifierUserId = c.Long(),
+                        CreationTime = c.DateTime(nullable: false, precision: 0),
+                        CreatorUserId = c.Long(),
+                    },
+                annotations: new Dictionary<string, object>
+                {
+                    { "DynamicFilter_Role_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
+                    { "DynamicFilter_Role_SoftDelete", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
+                })
+                .PrimaryKey(t => t.Id)
+                .ForeignKey("dbo.AbpUsers", t => t.CreatorUserId)
+                .ForeignKey("dbo.AbpUsers", t => t.DeleterUserId)
+                .ForeignKey("dbo.AbpUsers", t => t.LastModifierUserId)
+                .Index(t => t.DeleterUserId)
+                .Index(t => t.LastModifierUserId)
+                .Index(t => t.CreatorUserId);
             
             CreateTable(
                 "dbo.AbpTenantNotifications",
@@ -543,6 +584,10 @@ namespace ProjectManagementSystem.Migrations
             DropForeignKey("dbo.AbpRoles", "LastModifierUserId", "dbo.AbpUsers");
             DropForeignKey("dbo.AbpRoles", "DeleterUserId", "dbo.AbpUsers");
             DropForeignKey("dbo.AbpRoles", "CreatorUserId", "dbo.AbpUsers");
+            DropForeignKey("dbo.AbpOrganizationUnits", "ParentId", "dbo.AbpOrganizationUnits");
+            DropForeignKey("dbo.Modules", "ProjectId", "dbo.Projects");
+            DropForeignKey("dbo.Projects", "TeamLeaderId", "dbo.AbpUsers");
+            DropForeignKey("dbo.Modules", "MemberId", "dbo.AbpUsers");
             DropForeignKey("dbo.AbpSettings", "UserId", "dbo.AbpUsers");
             DropForeignKey("dbo.AbpUserRoles", "UserId", "dbo.AbpUsers");
             DropForeignKey("dbo.AbpPermissions", "UserId", "dbo.AbpUsers");
@@ -551,7 +596,6 @@ namespace ProjectManagementSystem.Migrations
             DropForeignKey("dbo.AbpUsers", "DeleterUserId", "dbo.AbpUsers");
             DropForeignKey("dbo.AbpUsers", "CreatorUserId", "dbo.AbpUsers");
             DropForeignKey("dbo.AbpUserClaims", "UserId", "dbo.AbpUsers");
-            DropForeignKey("dbo.AbpOrganizationUnits", "ParentId", "dbo.AbpOrganizationUnits");
             DropForeignKey("dbo.AbpFeatures", "EditionId", "dbo.AbpEditions");
             DropIndex("dbo.AbpUserNotifications", new[] { "UserId", "State", "CreationTime" });
             DropIndex("dbo.AbpUserLoginAttempts", new[] { "TenancyName", "UserNameOrEmailAddress", "Result" });
@@ -560,20 +604,23 @@ namespace ProjectManagementSystem.Migrations
             DropIndex("dbo.AbpTenants", new[] { "LastModifierUserId" });
             DropIndex("dbo.AbpTenants", new[] { "DeleterUserId" });
             DropIndex("dbo.AbpTenants", new[] { "EditionId" });
+            DropIndex("dbo.AbpRoles", new[] { "CreatorUserId" });
+            DropIndex("dbo.AbpRoles", new[] { "LastModifierUserId" });
+            DropIndex("dbo.AbpRoles", new[] { "DeleterUserId" });
+            DropIndex("dbo.AbpOrganizationUnits", new[] { "ParentId" });
+            DropIndex("dbo.AbpNotificationSubscriptions", new[] { "NotificationName", "EntityTypeName", "EntityId", "UserId" });
+            DropIndex("dbo.Projects", new[] { "TeamLeaderId" });
             DropIndex("dbo.AbpSettings", new[] { "UserId" });
             DropIndex("dbo.AbpUserRoles", new[] { "UserId" });
+            DropIndex("dbo.AbpPermissions", new[] { "RoleId" });
+            DropIndex("dbo.AbpPermissions", new[] { "UserId" });
             DropIndex("dbo.AbpUserLogins", new[] { "UserId" });
             DropIndex("dbo.AbpUserClaims", new[] { "UserId" });
             DropIndex("dbo.AbpUsers", new[] { "CreatorUserId" });
             DropIndex("dbo.AbpUsers", new[] { "LastModifierUserId" });
             DropIndex("dbo.AbpUsers", new[] { "DeleterUserId" });
-            DropIndex("dbo.AbpRoles", new[] { "CreatorUserId" });
-            DropIndex("dbo.AbpRoles", new[] { "LastModifierUserId" });
-            DropIndex("dbo.AbpRoles", new[] { "DeleterUserId" });
-            DropIndex("dbo.AbpPermissions", new[] { "UserId" });
-            DropIndex("dbo.AbpPermissions", new[] { "RoleId" });
-            DropIndex("dbo.AbpOrganizationUnits", new[] { "ParentId" });
-            DropIndex("dbo.AbpNotificationSubscriptions", new[] { "NotificationName", "EntityTypeName", "EntityId", "UserId" });
+            DropIndex("dbo.Modules", new[] { "MemberId" });
+            DropIndex("dbo.Modules", new[] { "ProjectId" });
             DropIndex("dbo.AbpFeatures", new[] { "EditionId" });
             DropIndex("dbo.AbpBackgroundJobs", new[] { "IsAbandoned", "NextTryTime" });
             DropTable("dbo.AbpUserOrganizationUnits",
@@ -607,6 +654,25 @@ namespace ProjectManagementSystem.Migrations
                 {
                     { "DynamicFilter_TenantNotificationInfo_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
                 });
+            DropTable("dbo.AbpRoles",
+                removedAnnotations: new Dictionary<string, object>
+                {
+                    { "DynamicFilter_Role_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
+                    { "DynamicFilter_Role_SoftDelete", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
+                });
+            DropTable("dbo.AbpOrganizationUnits",
+                removedAnnotations: new Dictionary<string, object>
+                {
+                    { "DynamicFilter_OrganizationUnit_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
+                    { "DynamicFilter_OrganizationUnit_SoftDelete", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
+                });
+            DropTable("dbo.AbpNotificationSubscriptions",
+                removedAnnotations: new Dictionary<string, object>
+                {
+                    { "DynamicFilter_NotificationSubscriptionInfo_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
+                });
+            DropTable("dbo.AbpNotifications");
+            DropTable("dbo.Projects");
             DropTable("dbo.AbpSettings",
                 removedAnnotations: new Dictionary<string, object>
                 {
@@ -616,6 +682,13 @@ namespace ProjectManagementSystem.Migrations
                 removedAnnotations: new Dictionary<string, object>
                 {
                     { "DynamicFilter_UserRole_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
+                });
+            DropTable("dbo.AbpPermissions",
+                removedAnnotations: new Dictionary<string, object>
+                {
+                    { "DynamicFilter_PermissionSetting_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
+                    { "DynamicFilter_RolePermissionSetting_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
+                    { "DynamicFilter_UserPermissionSetting_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
                 });
             DropTable("dbo.AbpUserLogins",
                 removedAnnotations: new Dictionary<string, object>
@@ -633,31 +706,7 @@ namespace ProjectManagementSystem.Migrations
                     { "DynamicFilter_User_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
                     { "DynamicFilter_User_SoftDelete", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
                 });
-            DropTable("dbo.AbpRoles",
-                removedAnnotations: new Dictionary<string, object>
-                {
-                    { "DynamicFilter_Role_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
-                    { "DynamicFilter_Role_SoftDelete", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
-                });
-            DropTable("dbo.AbpPermissions",
-                removedAnnotations: new Dictionary<string, object>
-                {
-                    { "DynamicFilter_PermissionSetting_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
-                    { "DynamicFilter_RolePermissionSetting_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
-                    { "DynamicFilter_UserPermissionSetting_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
-                });
-            DropTable("dbo.AbpOrganizationUnits",
-                removedAnnotations: new Dictionary<string, object>
-                {
-                    { "DynamicFilter_OrganizationUnit_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
-                    { "DynamicFilter_OrganizationUnit_SoftDelete", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
-                });
-            DropTable("dbo.AbpNotificationSubscriptions",
-                removedAnnotations: new Dictionary<string, object>
-                {
-                    { "DynamicFilter_NotificationSubscriptionInfo_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
-                });
-            DropTable("dbo.AbpNotifications");
+            DropTable("dbo.Modules");
             DropTable("dbo.AbpLanguageTexts",
                 removedAnnotations: new Dictionary<string, object>
                 {

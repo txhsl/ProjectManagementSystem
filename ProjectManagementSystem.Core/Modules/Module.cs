@@ -51,7 +51,7 @@ namespace ProjectManagementSystem.Modules
         [Required]
         public int Level { get; set; }
 
-        public bool IsFinished { get; set; }
+        public ModuleState State { get; set; }
 
         public DateTime CreationTime { get; set; }
         public DateTime? LastModificationTime { get; set; }
@@ -59,7 +59,7 @@ namespace ProjectManagementSystem.Modules
         public Module()
         {
             CreationTime = Clock.Now;
-            IsFinished = false;
+            State = ModuleState.Pending;
         }
 
         public Module(string name, string description = null) : this()
@@ -67,5 +67,12 @@ namespace ProjectManagementSystem.Modules
             Name = name;
             Description = description;
         }
+    }
+
+    public enum ModuleState : byte
+    {
+        Pending = 0,
+        Open = 1,
+        Completed = 2
     }
 }

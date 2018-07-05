@@ -8,7 +8,7 @@ namespace ProjectManagementSystem.Modules.Dto
 {
     public class ModuleSearchInputDto
     {
-        public bool? IsFinished { get; set; }
+        public ModuleState? State { get; set; }
 
         public int? ProjectId { get; set; }
 

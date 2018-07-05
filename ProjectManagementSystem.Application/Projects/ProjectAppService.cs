@@ -32,9 +32,9 @@ namespace ProjectManagementSystem.Projects
                 query = query.Where(t => t.TeamLeaderId == input.TeamLeaderId);
             }
 
-            if (input.IsFinished.HasValue)
+            if (input.State.HasValue)
             {
-                query = query.Where(t => t.IsFinished == input.IsFinished);
+                query = query.Where(t => t.State == input.State);
             }
 
             var list = query.ToList();
@@ -109,7 +109,7 @@ namespace ProjectManagementSystem.Projects
 
             var project = _projectRepository.Get(input.Id);
 
-            project.IsFinished = input.IsFinished;
+            project.State = input.State;
             
             if (input.TeamLeaderId.HasValue)
             {

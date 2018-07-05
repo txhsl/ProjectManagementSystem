@@ -31,7 +31,7 @@ namespace ProjectManagementSystem.Modules.Dto
 
         public int Level { get; set; }
 
-        public bool IsFinished { get; set; }
+        public ModuleState State { get; set; }
 
         public DateTime? LastModificationTime { get; set; }
 

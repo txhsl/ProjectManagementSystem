@@ -24,7 +24,7 @@ namespace ProjectManagementSystem.Projects.Dto
 
         public DateTime DeliverTime { get; set; }
 
-        public bool IsFinished { get; set; }
+        public ProjectState State { get; set; }
 
         public DateTime? LastModificationTime { get; set; }
 

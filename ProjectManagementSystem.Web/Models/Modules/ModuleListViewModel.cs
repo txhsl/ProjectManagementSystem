@@ -1,4 +1,5 @@
-﻿using ProjectManagementSystem.Modules.Dto;
+﻿using ProjectManagementSystem.Modules;
+using ProjectManagementSystem.Modules.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace ProjectManagementSystem.Web.Models.Modules
         /// <summary>
         /// 用来进行绑定列表过滤状态
         /// </summary>
-        public bool? SelectedModuleState { get; set; }
+        public ModuleState? SelectedModuleState { get; set; }
 
         /// <summary>
         /// 列表展示
@@ -44,21 +45,21 @@ namespace ProjectManagementSystem.Web.Models.Modules
             {
                 new SelectListItem()
                 {
-                    Text = "AllTasks",
+                    Text = "All",
                     Value = "",
                     Selected = SelectedModuleState==null
                 }
             };
-        
-            //list.AddRange(Enum.GetValues(typeof(bool))
-            //    .Cast<bool>()
-            //    .Select(state => new SelectListItem()
-            //    {
-            //        Text = $"TaskState_{state}",
-            //        Value = state.ToString(),
-            //        Selected = state == SelectedModuleState
-            //    })
-            //);
+
+            list.AddRange(Enum.GetValues(typeof(ModuleState))
+                .Cast<ModuleState>()
+                .Select(state => new SelectListItem()
+                {
+                    Text = $"{state}",
+                    Value = state.ToString(),
+                    Selected = state == SelectedModuleState
+                })
+            );
             return list;
         }
     }

@@ -8,7 +8,7 @@ namespace ProjectManagementSystem.Projects.Dto
 {
     public class ProjectSearchInputDto
     {
-        public bool? IsFinished { get; set; }
+        public ProjectState? State { get; set; }
 
         public int? TeamLeaderId { get; set; }
     }

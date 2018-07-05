@@ -29,7 +29,7 @@ namespace ProjectManagementSystem.Modules.Dto
 
         public int Level { get; set; }
 
-        public bool IsFinished { get; set; }
+        public ModuleState State { get; set; }
 
         public DateTime CreationTime { get; set; }
 
@@ -48,12 +48,13 @@ namespace ProjectManagementSystem.Modules.Dto
         {
             string style = "";
 
-            switch (IsFinished)
+            switch (State)
             {
-                case false:
+                case ModuleState.Pending:
+                case ModuleState.Open:
                     style = "fa-spinner fa-spin ";
                     break;
-                case true:
+                case ModuleState.Completed:
                     style = "fa-check-circle ";
                     break;
             }

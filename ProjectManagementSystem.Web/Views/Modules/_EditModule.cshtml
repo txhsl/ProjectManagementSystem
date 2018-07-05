@@ -61,10 +61,10 @@
                             </div>
                         </div>
                         <div class="form-group">
-                            @Html.LabelFor(model => model.IsFinished, htmlAttributes: new { @class = "control-label col-md-2" })
+                            @Html.LabelFor(model => model.State, htmlAttributes: new { @class = "control-label col-md-2" })
                             <div class="col-md-10">
-                                @Html.TextBoxFor(model => model.IsFinished, htmlAttributes: new { @class = "form-control" })
-                                @Html.ValidationMessageFor(model => model.IsFinished, "", new { @class = "text-danger" })
+                                @Html.EnumDropDownListFor(model => model.State, htmlAttributes: new { @class = "form-control" })
+                                @Html.ValidationMessageFor(model => model.State, "", new { @class = "text-danger" })
                             </div>
                         </div>
                         <div class="form-group">

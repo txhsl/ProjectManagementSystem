@@ -21,7 +21,7 @@ namespace ProjectManagementSystem.Projects.Dto
 
         public DateTime DeliverTime { get; set; }
 
-        public bool IsFinished { get; set; }
+        public ProjectState State { get; set; }
 
 
         public DateTime CreationTime { get; set; }
@@ -41,12 +41,13 @@ namespace ProjectManagementSystem.Projects.Dto
         {
             string style = "";
 
-            switch (IsFinished)
+            switch (State)
             {
-                case false:
+                case ProjectState.Pending:
+                case ProjectState.Open:
                     style = "fa-spinner fa-spin ";
                     break;
-                case true:
+                case ProjectState.Completed:
                     style = "fa-check-circle ";
                     break;
             }

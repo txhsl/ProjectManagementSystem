@@ -81,10 +81,16 @@ namespace ProjectManagementSystem.Web.Controllers
 
             var model = new ModuleListViewModel(output.Modules)
             {
-                SelectedModuleState = input.IsFinished
+                SelectedModuleState = input.State
 
             };
             return View(model);
+        }
+
+        public PartialViewResult GetList(ModuleSearchInputDto input)
+        {
+            var output = _moduleAppService.SearchModules(input);
+            return PartialView("_ListModules", output.Modules);
         }
     }
 }

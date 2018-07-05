@@ -1,4 +1,5 @@
-﻿using ProjectManagementSystem.Projects.Dto;
+﻿using ProjectManagementSystem.Projects;
+using ProjectManagementSystem.Projects.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,7 +12,7 @@ namespace ProjectManagementSystem.Web.Models.Projects
         /// <summary>
         /// 用来进行绑定列表过滤状态
         /// </summary>
-        public bool? SelectedProjectState { get; set; }
+        public ProjectState? SelectedProjectState { get; set; }
 
         /// <summary>
         /// 列表展示
@@ -44,21 +45,21 @@ namespace ProjectManagementSystem.Web.Models.Projects
             {
                 new SelectListItem()
                 {
-                    Text = "AllTasks",
+                    Text = "All",
                     Value = "",
                     Selected = SelectedProjectState==null
                 }
             };
 
-            //list.AddRange(Enum.GetValues(typeof(bool))
-            //    .Cast<bool>()
-            //    .Select(state => new SelectListItem()
-            //    {
-            //        Text = $"TaskState_{state}",
-            //        Value = state.ToString(),
-            //        Selected = state == SelectedProjectState
-            //    })
-            //);
+            list.AddRange(Enum.GetValues(typeof(ProjectState))
+                .Cast<ProjectState>()
+                .Select(state => new SelectListItem()
+                {
+                    Text = $"{state}",
+                    Value = state.ToString(),
+                    Selected = state == SelectedProjectState
+                })
+            );
             return list;
         }
     }

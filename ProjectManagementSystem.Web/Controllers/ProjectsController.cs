@@ -74,10 +74,16 @@ namespace ProjectManagementSystem.Web.Controllers
 
             var model = new ProjectListViewModel(output.Projects)
             {
-                SelectedProjectState = input.IsFinished
+                SelectedProjectState = input.State
 
             };
             return View(model);
+        }
+
+        public PartialViewResult GetList(ProjectSearchInputDto input)
+        {
+            var output = _projectAppService.SearchProjects(input);
+            return PartialView("_ListProjects", output.Projects);
         }
     }
 }

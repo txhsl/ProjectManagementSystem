@@ -36,7 +36,7 @@ namespace ProjectManagementSystem.Projects
 
         [Required]
         public DateTime DeliverTime { get; set; }
-        public bool IsFinished { get; set; }
+        public ProjectState State { get; set; }
 
         public DateTime CreationTime { get; set; }
         public DateTime? LastModificationTime { get; set; }
@@ -44,7 +44,7 @@ namespace ProjectManagementSystem.Projects
         public Project()
         {
             CreationTime = Clock.Now;
-            IsFinished = false;
+            State = ProjectState.Pending;
         }
 
         public Project(string name, string description = null) : this()
@@ -52,5 +52,11 @@ namespace ProjectManagementSystem.Projects
             Name = name;
             Description = description;
         }
+    }
+    public enum ProjectState : byte
+    {
+        Pending = 0,
+        Open = 1,
+        Completed = 2
     }
 }

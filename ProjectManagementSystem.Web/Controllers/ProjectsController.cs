@@ -1,5 +1,6 @@
 ﻿using Abp.Web.Mvc.Authorization;
 using Abp.Web.Mvc.Controllers;
+using ProjectManagementSystem.Authorization.Users;
 using ProjectManagementSystem.Projects;
 using ProjectManagementSystem.Projects.Dto;
 using ProjectManagementSystem.Users;
@@ -28,7 +29,7 @@ namespace ProjectManagementSystem.Web.Controllers
         public PartialViewResult Create()
         {
             var userList = _userAppService.GetUsers().Result;
-            ViewBag.TeamLeaderId = new SelectList(userList.Items, "Id", "FullName");
+            ViewBag.TeamLeaderId = new SelectList(userList.Items, "Id", "UserName");
             return PartialView("_CreateProject");
         }
 
@@ -51,7 +52,7 @@ namespace ProjectManagementSystem.Web.Controllers
             var updateProjectDto = AutoMapper.Mapper.Map<UpdateProjectDto>(project);
 
             var userList = _userAppService.GetUsers().Result;
-            ViewBag.TeamLeaderId = new SelectList(userList.Items, "Id", "FullName", updateProjectDto.TeamLeaderId);
+            ViewBag.TeamLeaderId = new SelectList(userList.Items, "Id", "UserName", updateProjectDto.TeamLeaderId);
 
             return PartialView("_EditProject", updateProjectDto);
         }
@@ -74,9 +75,14 @@ namespace ProjectManagementSystem.Web.Controllers
 
             var model = new ProjectListViewModel(output.Projects)
             {
-                SelectedProjectState = input.State
-
+                SelectedProjectState = input.State,
+                SelectedUserId = input.TeamLeaderId
             };
+
+            var userList = _userAppService.GetUsers().Result;
+            var userFullList = new List<User> { new User { Id = -1, UserName = "All" } }.Concat<User>(userList.Items);
+            ViewBag.SelectedUserId = new SelectList(userFullList, "Id", "UserName", model.SelectedUserId);
+
             return View(model);
         }
 

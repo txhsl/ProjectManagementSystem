@@ -1,4 +1,5 @@
-﻿using ProjectManagementSystem.Projects;
+﻿using ProjectManagementSystem.Authorization.Users;
+using ProjectManagementSystem.Projects;
 using ProjectManagementSystem.Projects.Dto;
 using System;
 using System.Collections.Generic;
@@ -18,6 +19,11 @@ namespace ProjectManagementSystem.Web.Models.Projects
         /// 列表展示
         /// </summary>
         public IReadOnlyList<ProjectDto> Projects { get; }
+
+        /// <summary>
+        /// 用于搜索
+        /// </summary>
+        public int? SelectedUserId { get; set; }
 
         /// <summary>
         /// 创建任务模型

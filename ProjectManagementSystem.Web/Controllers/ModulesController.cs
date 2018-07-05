@@ -1,5 +1,6 @@
 ﻿using Abp.Web.Mvc.Authorization;
 using Abp.Web.Mvc.Controllers;
+using ProjectManagementSystem.Authorization.Users;
 using ProjectManagementSystem.Modules;
 using ProjectManagementSystem.Modules.Dto;
 using ProjectManagementSystem.Projects;
@@ -31,7 +32,7 @@ namespace ProjectManagementSystem.Web.Controllers
         public PartialViewResult Create()
         {
             var userList = _userAppService.GetUsers().Result;
-            ViewBag.MemberId = new SelectList(userList.Items, "Id", "FullName");
+            ViewBag.MemberId = new SelectList(userList.Items, "Id", "UserName");
             var projectList = _projectAppService.SearchProjects(new Projects.Dto.ProjectSearchInputDto { });
             ViewBag.ProjectId = new SelectList(projectList.Projects, "Id", "Name");
             return PartialView("_CreateModule");
@@ -56,7 +57,7 @@ namespace ProjectManagementSystem.Web.Controllers
             var updateModuleDto = AutoMapper.Mapper.Map<UpdateModuleDto>(module);
 
             var userList = _userAppService.GetUsers().Result;
-            ViewBag.MemberId = new SelectList(userList.Items, "Id", "FullName", updateModuleDto.MemberId);
+            ViewBag.MemberId = new SelectList(userList.Items, "Id", "UserName", updateModuleDto.MemberId);
             var projectList = _projectAppService.SearchProjects(new Projects.Dto.ProjectSearchInputDto { });
             ViewBag.ProjectId = new SelectList(projectList.Projects, "Id", "Name", updateModuleDto.ProjectId);
 
@@ -81,9 +82,18 @@ namespace ProjectManagementSystem.Web.Controllers
 
             var model = new ModuleListViewModel(output.Modules)
             {
-                SelectedModuleState = input.State
-
+                SelectedModuleState = input.State,
+                SelectedUserId = input.MemberId,
+                SelectedProjectId = input.ProjectId
             };
+
+            var userList = _userAppService.GetUsers().Result;
+            var userFullList = new List<User>{ new User { Id = -1, UserName = "All" } }.Concat<User>(userList.Items);
+            ViewBag.SelectedUserId = new SelectList(userFullList, "Id", "UserName", model.SelectedUserId);
+
+            var projectList = _projectAppService.SearchProjects(new Projects.Dto.ProjectSearchInputDto { });
+            ViewBag.SelectedProjectId = new SelectList(projectList.Projects, "Id", "Name", model.SelectedProjectId);
+
             return View(model);
         }
 

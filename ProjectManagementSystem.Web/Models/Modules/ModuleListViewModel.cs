@@ -20,6 +20,13 @@ namespace ProjectManagementSystem.Web.Models.Modules
         public IReadOnlyList<ModuleDto> Modules { get; }
 
         /// <summary>
+        /// 用于搜索
+        /// </summary>
+        public int? SelectedUserId { get; set; }
+
+        public int? SelectedProjectId { get; set; }
+
+        /// <summary>
         /// 创建任务模型
         /// </summary>
         public CreateModuleDto CreateModuleInput { get; set; }

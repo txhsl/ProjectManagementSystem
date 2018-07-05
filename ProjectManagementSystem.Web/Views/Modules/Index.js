@@ -5,8 +5,18 @@
     $(function () {
 
         var $moduleStateCombobox = $('#ModuleStateCombobox');
+        var $selectedUserId = $('#SelectedUserId');
+        var $selectedProjectId = $('#SelectedProjectId');
 
         $moduleStateCombobox.change(function () {
+            getModuleList();
+        });
+
+        $selectedUserId.change(function () {
+            getModuleList();
+        });
+
+        $selectedProjectId.change(function () {
             getModuleList();
         });
 
@@ -81,7 +91,14 @@ function deleteModule(id) {
 
 function getModuleList() {
     var $moduleStateCombobox = $('#ModuleStateCombobox');
-    var url = '/Modules/GetList?state=' + $moduleStateCombobox.val();
+    var $selectedUserId = $('#SelectedUserId');
+    var $selectedProjectId = $('#SelectedProjectId');
+    var url = '/Modules/GetList?State=' + $moduleStateCombobox.val() + '&ProjectId=' + $selectedProjectId.val();
+
+    if ($selectedUserId.val() != -1) {
+        url += '&MemberId=' + $selectedUserId.val();
+    }
+
     abp.ajax({
         url: url,
         type: "GET",

@@ -5,8 +5,13 @@
     $(function () {
 
         var $projectStateCombobox = $('#ProjectStateCombobox');
+        var $selectedUserId = $('#SelectedUserId');
 
         $projectStateCombobox.change(function () {
+            getProjectList();
+        });
+
+        $selectedUserId.change(function () {
             getProjectList();
         });
 
@@ -81,7 +86,13 @@ function deleteProject(id) {
 
 function getProjectList() {
     var $projectStateCombobox = $('#ProjectStateCombobox');
-    var url = '/Projects/GetList?state=' + $projectStateCombobox.val();
+    var $selectedUserId = $('#SelectedUserId');
+    var url = '/Projects/GetList?State=' + $projectStateCombobox.val();
+
+    if ($selectedUserId != -1) {
+        url += '&TeamLeaderId=' + $selectedUserId.val()
+    }
+
     abp.ajax({
         url: url,
         type: "GET",

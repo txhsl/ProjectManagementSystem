@@ -12,16 +12,12 @@
     <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#add">Create Project</button>
     <!--<a class="btn btn-primary" data-toggle="modal" href="@Url.Action("RemoteCreate")" data-target="#modal" role="button">（Create Project）使用Remote方式调用Modal进行展现</a>-->
     <!--任务清单按照状态过滤的下拉框-->
-    <span class="pull-right">
-        @Html.DropDownListFor(
-            model => model.SelectedProjectState,
-            Model.GetProjectStateSelectListItems(),
-            new
-            {
-                @class = "form-control select2",
-                id = "ProjectStateCombobox"
-            })
-    </span>
+    <div class="pull-right">
+        @Html.DropDownListFor(model => model.SelectedProjectState, Model.GetProjectStateSelectListItems(), new { @class = "form-control select2", id = "ProjectStateCombobox" })
+    </div>
+    <div class="pull-right">
+        @Html.DropDownList("SelectedUserId", null, htmlAttributes: new { @class = "form-control select2", id = "SelectedUserId" })
+    </div>
 </h2>
 <!--任务清单展示-->
 <div class="row" id="projectList">

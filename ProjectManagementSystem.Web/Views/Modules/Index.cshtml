@@ -13,15 +13,14 @@
     <!--<a class="btn btn-primary" data-toggle="modal" href="@Url.Action("RemoteCreate")" data-target="#modal" role="button">（Create Module）使用Remote方式调用Modal进行展现</a>-->
     <!--任务清单按照状态过滤的下拉框-->
     <span class="pull-right">
-        @Html.DropDownListFor(
-            model => model.SelectedModuleState,
-            Model.GetModuleStateSelectListItems(),
-            new
-            {
-                @class = "form-control select2",
-                id = "ModuleStateCombobox"
-            })
+        @Html.DropDownListFor(model => model.SelectedModuleState, Model.GetModuleStateSelectListItems(), new { @class = "form-control select2", id = "ModuleStateCombobox" })
     </span>
+    <div class="pull-right">
+        @Html.DropDownList("SelectedUserId", null, htmlAttributes: new { @class = "form-control select2", id = "SelectedUserId" })
+    </div>
+    <div class="pull-right">
+        @Html.DropDownList("SelectedProjectId", null, htmlAttributes: new { @class = "form-control select2", id = "SelectedProjectId" })
+    </div>
 </h2>
 <!--任务清单展示-->
 <div class="row" id="moduleList">

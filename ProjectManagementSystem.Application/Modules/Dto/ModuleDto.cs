@@ -51,6 +51,8 @@ namespace ProjectManagementSystem.Modules.Dto
             switch (State)
             {
                 case ModuleState.Pending:
+                    style = "fa-spinner";
+                    break;
                 case ModuleState.Open:
                     style = "fa-spinner fa-spin ";
                     break;

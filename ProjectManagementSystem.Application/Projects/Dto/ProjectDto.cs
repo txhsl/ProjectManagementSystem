@@ -44,6 +44,8 @@ namespace ProjectManagementSystem.Projects.Dto
             switch (State)
             {
                 case ProjectState.Pending:
+                    style = "fa-spinner";
+                    break;
                 case ProjectState.Open:
                     style = "fa-spinner fa-spin ";
                     break;

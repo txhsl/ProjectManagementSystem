@@ -6,7 +6,8 @@
             <li class="list-group-item">
                 <div class="btn-group pull-right">
                     <button type="button" class="btn btn-info" onclick="editProject(@project.Id);">Edit</button>
-                    <button type="button" class="btn btn-success" onclick="deleteProject(@project.Id);">Delete</button>
+                    <button type="button" class="btn btn-success" onclick="sendEmail(@project.TeamLeaderId, @project.Name);">Email</button>
+                    <button type="button" class="btn btn-danger" onclick="deleteProject(@project.Id);">Delete</button>
                 </div>
                 <div class="media">
                     <a class="media-left" href="#">

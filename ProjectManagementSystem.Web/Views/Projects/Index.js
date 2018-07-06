@@ -68,6 +68,21 @@ function editProject(id) {
         });
 }
 
+function sendEmail(id, name) {
+    abp.message.confirm(
+        "是否给 " + name + " 的负责人发送提醒信息",
+        function (isConfirmed) {
+            if (isConfirmed) {
+                moduleService.sendEmail(id, name)
+                    .done(function () {
+                        abp.notify.info("发送成功！");
+                        getModuleList();
+                    });
+            }
+        }
+    );
+}
+
 function deleteProject(id) {
     abp.message.confirm(
         "是否删除Id为" + id + "的项目信息",

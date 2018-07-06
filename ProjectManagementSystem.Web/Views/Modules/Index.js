@@ -73,6 +73,21 @@ function editModule(id) {
         });
 }
 
+function sendEmail(id, name) {
+    abp.message.confirm(
+        "是否给 " + name +" 的负责人发送提醒信息",
+        function (isConfirmed) {
+            if (isConfirmed) {
+                moduleService.sendEmail(id, name)
+                    .done(function () {
+                        abp.notify.info("发送成功！");
+                        getModuleList();
+                    });
+            }
+        }
+    );
+}
+
 function deleteModule(id) {
     abp.message.confirm(
         "是否删除Id为" + id + "的模块信息",

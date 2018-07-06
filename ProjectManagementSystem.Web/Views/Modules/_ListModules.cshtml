@@ -5,9 +5,9 @@
         {
             <li class="list-group-item">
                 <div class="btn-group pull-right">
-                    <button type="button" class="btn btn-info" onclick="editModule(@module.Id);">Edit</button>
-                    <button type="button" class="btn btn-success" onclick="sendEmail(@module.MemberId, @module.Name);">Email</button>
-                    <button type="button" class="btn btn-danger" onclick="deleteModule(@module.Id);">Delete</button>
+                    <button type="button" class="btn btn-info" onclick="editModule(@module.Id);">@L("Edit")</button>
+                    <button type="button" class="btn btn-success" onclick="sendEmail(@module.MemberId, '@module.Name');">@L("Email")</button>
+                    <button type="button" class="btn btn-danger" onclick="deleteModule(@module.Id);">@L("Delete")</button>
                 </div>
                 <div class="media">
                     <a class="media-left" href="#">
@@ -15,10 +15,10 @@
                     </a>
                     <div class="media-body">
                         <h4 class="media-heading">@module.Name</h4>
-                        <p class="text-info">Belong to: @module.ProjectName</p>
-                        <p class="text-info">Principal：@module.MemberName</p>
-                        <p class="text-muted">StartDate: @module.StartTime.ToString("yyyy-MM-dd HH:mm:ss")</p>
-                        <p class="text-muted">DeliverDate: @module.DeliverTime.ToString("yyyy-MM-dd HH:mm:ss")</p>
+                        <p class="text-info">@L("Belong to"): @module.ProjectName</p>
+                        <p class="text-info">@L("Principal")：@module.MemberName</p>
+                        <p class="text-muted">@L("StartDate"): @module.StartTime.ToString("yyyy-MM-dd HH:mm:ss")</p>
+                        <p class="text-muted">@L("DeliverDate"): @module.DeliverTime.ToString("yyyy-MM-dd HH:mm:ss")</p>
                     </div>
                 </div>
             </li>

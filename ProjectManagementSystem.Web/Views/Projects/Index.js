@@ -73,7 +73,7 @@ function sendEmail(id, name) {
         "是否给 " + name + " 的负责人发送提醒信息",
         function (isConfirmed) {
             if (isConfirmed) {
-                moduleService.sendEmail(id, name)
+                projectService.sendEmail(id, name)
                     .done(function () {
                         abp.notify.info("发送成功！");
                         getModuleList();

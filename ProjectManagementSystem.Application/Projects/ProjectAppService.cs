@@ -139,8 +139,15 @@ namespace ProjectManagementSystem.Projects
             
             if (input.TeamLeaderId.HasValue)
             {
-                project.TeamLeaderId = input.TeamLeaderId;
                 var user = _userRepository.Get(ObjectMapper.Map<long>(input.TeamLeaderId));
+
+                if (input.TeamLeaderId != project.TeamLeaderId)
+                {
+                    string message = "A new project -- \"" + input.Name + "\" has being assigned to u.";
+                    _notificationPublisher.Publish("New Project", new MessageNotificationData(message), null, NotificationSeverity.Info, new[] { user.ToUserIdentifier() });
+                }
+
+                project.TeamLeaderId = input.TeamLeaderId;
                 project.TeamLeader = user;
             }
         }

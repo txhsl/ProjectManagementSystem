@@ -166,8 +166,15 @@ namespace ProjectManagementSystem.Projects
 
             if (input.MemberId.HasValue)
             {
-                module.MemberId = input.MemberId;
                 var user = _userRepository.Get(ObjectMapper.Map<long>(input.MemberId));
+
+                if (input.MemberId != module.MemberId)
+                {
+                    string message = "A new module -- \"" + input.Name + "\" has being assigned to u.";
+                    _notificationPublisher.Publish("New Module", new MessageNotificationData(message), null, NotificationSeverity.Info, new[] { user.ToUserIdentifier() });
+                }
+
+                module.MemberId = input.MemberId;
                 module.Member = user;
             }
 

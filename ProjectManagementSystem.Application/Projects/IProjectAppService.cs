@@ -23,6 +23,8 @@ namespace ProjectManagementSystem.Projects
 
         void DeleteProject(int projectId);
 
+        void SendEmail(int id, string name);
+
         IList<ProjectDto> GetAllProjects();
     }
 }

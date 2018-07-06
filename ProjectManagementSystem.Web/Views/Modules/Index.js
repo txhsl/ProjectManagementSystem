@@ -52,7 +52,6 @@ function hideForm(modalId) {
 function errorPost(xhr, status, error, modalId) {
     if (error.length > 0) {
         abp.notify.error('Something is going wrong, please retry again later!');
-        console.log(xhr.responseText);
         var $modal = $(modalId);
         abp.ui.clearBusy($modal);
     }

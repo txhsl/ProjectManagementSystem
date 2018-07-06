@@ -21,7 +21,7 @@ namespace ProjectManagementSystem.Migrations.SeedData
             AddSettingIfNotExists(EmailSettingNames.DefaultFromAddress, "teumessian@qq.com");
             AddSettingIfNotExists(EmailSettingNames.DefaultFromDisplayName, "TeamLeader");
             AddSettingIfNotExists(EmailSettingNames.Smtp.Port, "587");
-            AddSettingIfNotExists(EmailSettingNames.Smtp.Host, "smto.qq.com");
+            AddSettingIfNotExists(EmailSettingNames.Smtp.Host, "smtp.qq.com");
             AddSettingIfNotExists(EmailSettingNames.Smtp.UserName, "teumessian@qq.com");
             AddSettingIfNotExists(EmailSettingNames.Smtp.Password, "ddnwddadgcznbdij");
             AddSettingIfNotExists(EmailSettingNames.Smtp.Domain, "");

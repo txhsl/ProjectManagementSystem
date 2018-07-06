@@ -23,6 +23,8 @@ namespace ProjectManagementSystem.Modules
 
         void DeleteModule(int moduleId);
 
+        void SendEmail(int id, string name);
+
         IList<ModuleDto> GetAllModules();
     }
 }

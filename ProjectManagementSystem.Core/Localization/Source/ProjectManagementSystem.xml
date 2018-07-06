@@ -4,7 +4,7 @@
     <text name="HomePage" value="Home page" />
     <text name="About" value="About" />
     <text name="WellcomeMessage" value="Welcome to ProjectManagementSystem!" />
-    
+
     <text name="FormIsNotValidMessage" value="Form is not valid. Please check and fix errors." />
     <text name="TenantNameCanNotBeEmpty" value="Tenant name can not be empty" />
 
@@ -77,6 +77,29 @@
     <text name="Edit">Edit</text>
     <text name="Delete">Delete</text>
 
+    <text name="Task List">Task List</text>
+    <text name="Project List">Project List</text>
+    <text name="Module List">Module List</text>
+    <text name="ProjectList">Project List</text>
+    <text name="ModuleList">Module List</text>
+    <text name="MemberId">Member</text>
+    <text name="TeamLeaderId">TeamLeader</text>
+    <text name="ProjectId">Project</text>
+    <text name="Description">Description</text>
+    <text name="TechStack">TechStack</text>
+    <text name="Level">Level</text>
+    <text name="StartTime">StartTime</text>
+    <text name="DeliverTime">DeliverTime</text>
+    <text name="State">State</text>
+    <text name="Create">Create</text>
+    <text name="Email">Email</text>
 
+    <text name="Belong to">Belong to</text>
+    <text name="Principal">Principal</text>
+    <text name="StartDate">StartDate</text>
+    <text name="DeliverDate">DeliverDate</text>
+    <text name="Create Project">Create Project</text>
+    <text name="Create Module">Create Module</text>
+    
   </texts>
 </localizationDictionary>

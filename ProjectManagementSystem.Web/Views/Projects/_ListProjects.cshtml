@@ -5,9 +5,9 @@
         {
             <li class="list-group-item">
                 <div class="btn-group pull-right">
-                    <button type="button" class="btn btn-info" onclick="editProject(@project.Id);">Edit</button>
-                    <button type="button" class="btn btn-success" onclick="sendEmail(@project.TeamLeaderId, @project.Name);">Email</button>
-                    <button type="button" class="btn btn-danger" onclick="deleteProject(@project.Id);">Delete</button>
+                    <button type="button" class="btn btn-info" onclick="editProject(@project.Id);">@L("Edit")</button>
+                    <button type="button" class="btn btn-success" onclick="sendEmail(@project.TeamLeaderId, '@project.Name');">@L("Email")</button>
+                    <button type="button" class="btn btn-danger" onclick="deleteProject(@project.Id);">@L("Delete")</button>
                 </div>
                 <div class="media">
                     <a class="media-left" href="#">
@@ -15,9 +15,9 @@
                     </a>
                     <div class="media-body">
                         <h4 class="media-heading">@project.Name</h4>
-                        <p class="text-info">Principal: @project.TeamLeaderName</p>
-                        <p class="text-muted">StartDate: @project.StartTime.ToString("yyyy-MM-dd HH:mm:ss")</p>
-                        <p class="text-muted">DeliverDate: @project.DeliverTime.ToString("yyyy-MM-dd HH:mm:ss")</p>
+                        <p class="text-info">@L("Principal"): @project.TeamLeaderName</p>
+                        <p class="text-muted">@L("StartDate"): @project.StartTime.ToString("yyyy-MM-dd HH:mm:ss")</p>
+                        <p class="text-muted">@L("DeliverDate"): @project.DeliverTime.ToString("yyyy-MM-dd HH:mm:ss")</p>
                     </div>
                 </div>
             </li>

@@ -55,5 +55,32 @@
     <text name="Yes" value="是" />
     <text name="No" value="否" />
     <text name="Optional" value="可选的" />
+
+    <text name="Task List">任务列表</text>
+    <text name="Project List">项目列表</text>
+    <text name="Module List">模块列表</text>
+    <text name="ProjectList">项目列表</text>
+    <text name="ModuleList">模块列表</text>
+    <text name="MemberId">指定成员</text>
+    <text name="TeamLeaderId">指定领队</text>
+    <text name="ProjectId">归属项目</text>
+    <text name="Description">描述</text>
+    <text name="TechStack">技术栈</text>
+    <text name="Level">重要等级</text>
+    <text name="StartTime">开始时间</text>
+    <text name="DeliverTime">交付时间</text>
+    <text name="State">状态</text>
+    <text name="Create">新建</text>
+    <text name="Email">发送邮件</text>
+
+    <text name="Belong to">归属于</text>
+    <text name="Principal">负责人</text>
+    <text name="StartDate">开始日期</text>
+    <text name="DeliverDate">交付日期</text>
+    <text name="Create Project">新建项目</text>
+    <text name="Create Module">新建模块</text>
+
+    <text name="Edit">编辑</text>
+    <text name="Delete">删除</text>
   </texts>
 </localizationDictionary>

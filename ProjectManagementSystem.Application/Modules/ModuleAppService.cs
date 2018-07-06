@@ -1,6 +1,8 @@
 ﻿using Abp.Authorization;
 using Abp.AutoMapper;
 using Abp.Domain.Repositories;
+using Abp.Net.Mail.Smtp;
+using Abp.Notifications;
 using Abp.Threading;
 using AutoMapper;
 using ProjectManagementSystem.Authorization;
@@ -21,12 +23,18 @@ namespace ProjectManagementSystem.Projects
         private readonly IRepository<Module> _moduleRepository;
         private readonly IRepository<Project> _projectRepository;
         private readonly IRepository<User, long> _userRepository;
+        private readonly ISmtpEmailSenderConfiguration _smtpEmialSenderConfig;
+        private readonly INotificationPublisher _notificationPublisher;
 
-        public ModuleAppService(IRepository<Module> moduleRepository, IRepository<Project> projectRepository, IRepository<User, long> userRepository)
+        public ModuleAppService(IRepository<Module> moduleRepository, IRepository<Project> projectRepository,
+            IRepository<User, long> userRepository, ISmtpEmailSenderConfiguration smtpEmialSenderConfigtion,
+            INotificationPublisher notificationPublisher)
         {
             _moduleRepository = moduleRepository;
             _projectRepository = projectRepository;
             _userRepository = userRepository;
+            _smtpEmialSenderConfig = smtpEmialSenderConfigtion;
+            _notificationPublisher = notificationPublisher;
         }
 
         public ModuleSearchOutputDto SearchModules(ModuleSearchInputDto input)
@@ -85,6 +93,9 @@ namespace ProjectManagementSystem.Projects
             {
                 var user = _userRepository.Get(ObjectMapper.Map<long>(input.MemberId));
                 module.Member = user;
+
+                string message = "A new module -- \"" + input.Name + "\" has being assigned to u.";
+                _notificationPublisher.Publish("New Module", new MessageNotificationData(message), null, NotificationSeverity.Info, new[] { user.ToUserIdentifier() });
             }
 
             if (input.ProjectId.HasValue)
@@ -166,6 +177,16 @@ namespace ProjectManagementSystem.Projects
                 var project = _projectRepository.Get(ObjectMapper.Map<int>(input.ProjectId));
                 module.Project = project;
             }
+        }
+
+        [AbpAuthorize(PermissionNames.Pages_Modules)]
+        public void SendEmail(int memberId, string name)
+        {
+            var user = _userRepository.Get(ObjectMapper.Map<long>(memberId));
+
+            SmtpEmailSender emailSender = new SmtpEmailSender(_smtpEmialSenderConfig);
+            string message = "Be aware of you task module -- " + name + ", which is approaching its deliver time.";
+            emailSender.Send("teumessian@qq.com", user.EmailAddress, "New Todo item", message);
         }
     }
 }

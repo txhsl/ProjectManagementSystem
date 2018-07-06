@@ -18,8 +18,15 @@ namespace ProjectManagementSystem.Migrations.SeedData
         public void Create()
         {
             //Emailing
-            AddSettingIfNotExists(EmailSettingNames.DefaultFromAddress, "admin@mydomain.com");
-            AddSettingIfNotExists(EmailSettingNames.DefaultFromDisplayName, "mydomain.com mailer");
+            AddSettingIfNotExists(EmailSettingNames.DefaultFromAddress, "teumessian@qq.com");
+            AddSettingIfNotExists(EmailSettingNames.DefaultFromDisplayName, "TeamLeader");
+            AddSettingIfNotExists(EmailSettingNames.Smtp.Port, "587");
+            AddSettingIfNotExists(EmailSettingNames.Smtp.Host, "smto.qq.com");
+            AddSettingIfNotExists(EmailSettingNames.Smtp.UserName, "teumessian@qq.com");
+            AddSettingIfNotExists(EmailSettingNames.Smtp.Password, "ddnwddadgcznbdij");
+            AddSettingIfNotExists(EmailSettingNames.Smtp.Domain, "");
+            AddSettingIfNotExists(EmailSettingNames.Smtp.EnableSsl, "true");
+            AddSettingIfNotExists(EmailSettingNames.Smtp.UseDefaultCredentials, "false");
 
             //Languages
             AddSettingIfNotExists(LocalizationSettingNames.DefaultLanguage, "en");

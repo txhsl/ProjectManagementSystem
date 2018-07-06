@@ -1,6 +1,8 @@
 ﻿using Abp.Authorization;
 using Abp.AutoMapper;
 using Abp.Domain.Repositories;
+using Abp.Net.Mail.Smtp;
+using Abp.Notifications;
 using AutoMapper;
 using ProjectManagementSystem.Authorization;
 using ProjectManagementSystem.Authorization.Users;
@@ -18,11 +20,16 @@ namespace ProjectManagementSystem.Projects
 
         private readonly IRepository<Project> _projectRepository;
         private readonly IRepository<User, long> _userRepository;
+        private readonly ISmtpEmailSenderConfiguration _smtpEmialSenderConfig;
+        private readonly INotificationPublisher _notificationPublisher;
 
-        public ProjectAppService(IRepository<Project> projectRepository, IRepository<User, long> userRepository)
+        public ProjectAppService(IRepository<Project> projectRepository, IRepository<User, long> userRepository,
+            ISmtpEmailSenderConfiguration smtpEmialSenderConfigtion, INotificationPublisher notificationPublisher)
         {
             _projectRepository = projectRepository;
             _userRepository = userRepository;
+            _smtpEmialSenderConfig = smtpEmialSenderConfigtion;
+            _notificationPublisher = notificationPublisher;
         }
 
         public ProjectSearchOutputDto SearchProjects(ProjectSearchInputDto input)
@@ -70,6 +77,9 @@ namespace ProjectManagementSystem.Projects
             {
                 var user = _userRepository.Get(ObjectMapper.Map<long>(input.TeamLeaderId));
                 project.TeamLeader = user;
+
+                string message = "A new project -- \"" + input.Name + "\" has being assigned to u.";
+                _notificationPublisher.Publish("New Project", new MessageNotificationData(message), null, NotificationSeverity.Info, new[] { user.ToUserIdentifier() });
             }
 
             return _projectRepository.InsertAndGetId(project);
@@ -107,7 +117,7 @@ namespace ProjectManagementSystem.Projects
             return project.MapTo<ProjectDto>();
         }
 
-        [AbpAuthorize(PermissionNames.Pages_Projects)]
+        [AbpAuthorize(PermissionNames.Pages_Projects_EditState)]
         public void UpdateProject(UpdateProjectDto input)
         {
             Logger.Info("Updating a project for input: " + input);
@@ -115,6 +125,12 @@ namespace ProjectManagementSystem.Projects
             var project = _projectRepository.Get(input.Id);
 
             project.State = input.State;
+
+            if (input.Name != project.Name || input.Description != project.Description || input.StartTime != project.StartTime
+                || input.DeliverTime != project.DeliverTime || input.TeamLeaderId != project.TeamLeaderId)
+            {
+                PermissionChecker.Authorize(PermissionNames.Pages_Projects_EditOthers);
+            }
 
             project.Name = input.Name;
             project.Description = input.Description;
@@ -127,6 +143,16 @@ namespace ProjectManagementSystem.Projects
                 var user = _userRepository.Get(ObjectMapper.Map<long>(input.TeamLeaderId));
                 project.TeamLeader = user;
             }
+        }
+
+        [AbpAuthorize(PermissionNames.Pages_Projects)]
+        public void SendEmail(int teamLeaderId, string name)
+        {
+            var user = _userRepository.Get(ObjectMapper.Map<long>(teamLeaderId));
+
+            SmtpEmailSender emailSender = new SmtpEmailSender(_smtpEmialSenderConfig);
+            string message = "Be aware of you task project -- " + name + ", which is approaching its deliver time.";
+            emailSender.Send("teumessian@qq.com", user.EmailAddress, "New Todo item", message);
         }
     }
 }

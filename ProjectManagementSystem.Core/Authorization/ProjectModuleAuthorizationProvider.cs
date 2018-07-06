@@ -9,7 +9,9 @@ namespace ProjectManagementSystem.Authorization
         public override void SetPermissions(IPermissionDefinitionContext context)
         {
             //Use for task dispatch
-            context.CreatePermission(PermissionNames.Pages_Projects, L("Projects"));
+            var projects = context.CreatePermission(PermissionNames.Pages_Projects, L("Projects"));
+            projects.CreateChildPermission(PermissionNames.Pages_Projects_EditState, L("EditProjectsState"));
+            projects.CreateChildPermission(PermissionNames.Pages_Projects_EditOthers, L("EditProjectsOthers"));
 
             var modules = context.CreatePermission(PermissionNames.Pages_Modules, L("Modules"));
             modules.CreateChildPermission(PermissionNames.Pages_Modules_EditState, L("EditModulesState"));

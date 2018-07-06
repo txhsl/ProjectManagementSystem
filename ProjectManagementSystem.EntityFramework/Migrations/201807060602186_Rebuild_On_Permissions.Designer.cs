@@ -7,13 +7,13 @@ namespace ProjectManagementSystem.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class Rebuild_On_Permissons : IMigrationMetadata
+    public sealed partial class Rebuild_On_Permissions : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Rebuild_On_Permissons));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(Rebuild_On_Permissions));
         
         string IMigrationMetadata.Id
         {
-            get { return "201807051618513_Rebuild_On_Permissons"; }
+            get { return "201807060602186_Rebuild_On_Permissions"; }
         }
         
         string IMigrationMetadata.Source

@@ -42,6 +42,10 @@ namespace ProjectManagementSystem.Migrations.SeedData
                     .Where(p => p.MultiTenancySides.HasFlag(MultiTenancySides.Tenant))
                     .ToList();
 
+                //Grant all project/module permissions
+                var projectPermissions = PermissionFinder.GetAllPermissions(new ProjectModuleAuthorizationProvider()).ToList();
+                permissions.AddRange(projectPermissions);
+
                 foreach (var permission in permissions)
                 {
                     _context.Permissions.Add(
@@ -53,10 +57,6 @@ namespace ProjectManagementSystem.Migrations.SeedData
                             RoleId = adminRole.Id
                         });
                 }
-
-                //Grant all project/module permissions
-                var projectPermissions = PermissionFinder.GetAllPermissions(new ProjectModuleAuthorizationProvider()).ToList();
-                permissions.AddRange(projectPermissions);
 
                 _context.SaveChanges();
             }

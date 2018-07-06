@@ -61,6 +61,86 @@ namespace ProjectManagementSystem.Migrations.SeedData
                 _context.SaveChanges();
             }
 
+            //Leader role for tenancy
+
+            var leaderRoleForHost = _context.Roles.FirstOrDefault(r => r.TenantId == null && r.Name == StaticRoleNames.Host.TeamLeader);
+            if (leaderRoleForHost == null)
+            {
+                leaderRoleForHost = _context.Roles.Add(new Role { Name = StaticRoleNames.Host.TeamLeader, DisplayName = StaticRoleNames.Host.TeamLeader, IsStatic = true });
+                _context.SaveChanges();
+
+                //Grant all tenant permissions
+                var permissions = PermissionFinder
+                    .GetAllPermissions(new ProjectManagementSystemAuthorizationProvider())
+                    .Where(p => p.MultiTenancySides.HasFlag(MultiTenancySides.Tenant))
+                    .ToList();
+
+
+                //Grant several project/module permissions
+                var projectPermissions = PermissionFinder.GetAllPermissions(new ProjectModuleAuthorizationProvider()).ToList();
+
+                foreach (var permission in projectPermissions)
+                {
+                    if (permission.Name != PermissionNames.Pages_Projects && permission.Name != PermissionNames.Pages_Projects_EditOthers)
+                    {
+                        permissions.Add(permission);
+                    }
+                }
+
+                foreach (var permission in permissions)
+                {
+                    _context.Permissions.Add(
+                        new RolePermissionSetting
+                        {
+                            Name = permission.Name,
+                            IsGranted = true,
+                            RoleId = leaderRoleForHost.Id
+                        });
+                }
+
+                _context.SaveChanges();
+            }
+
+            //Member role for tenancy
+
+            var memberRoleForHost = _context.Roles.FirstOrDefault(r => r.TenantId == null && r.Name == StaticRoleNames.Host.Member);
+            if (memberRoleForHost == null)
+            {
+                memberRoleForHost = _context.Roles.Add(new Role { Name = StaticRoleNames.Host.Member, DisplayName = StaticRoleNames.Host.Member, IsStatic = true });
+                _context.SaveChanges();
+
+                //Grant all tenant permissions
+                var permissions = PermissionFinder
+                    .GetAllPermissions(new ProjectManagementSystemAuthorizationProvider())
+                    .Where(p => p.MultiTenancySides.HasFlag(MultiTenancySides.Tenant))
+                    .ToList();
+
+                //Grant several project/module permissions
+                var projectPermissions = PermissionFinder.GetAllPermissions(new ProjectModuleAuthorizationProvider()).ToList();
+
+                foreach (var permission in projectPermissions)
+                {
+                    if (permission.Name == PermissionNames.Pages_Modules_EditState)
+                    {
+                        permissions.Add(permission);
+                    }
+                }
+
+                foreach (var permission in permissions)
+                {
+                    _context.Permissions.Add(
+                        new RolePermissionSetting
+                        {
+                            Name = permission.Name,
+                            IsGranted = true,
+                            RoleId = memberRoleForHost.Id
+                        });
+                }
+
+                _context.SaveChanges();
+            }
+
+
             //admin user
 
             var adminUser = _context.Users.FirstOrDefault(u => u.TenantId == _tenantId && u.UserName == User.AdminUserName);

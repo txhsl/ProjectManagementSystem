@@ -52,6 +52,7 @@ function hideForm(modalId) {
 function errorPost(xhr, status, error, modalId) {
     if (error.length > 0) {
         abp.notify.error('Something is going wrong, please retry again later!');
+        console.log(xhr.responseText);
         var $modal = $(modalId);
         abp.ui.clearBusy($modal);
     }
@@ -108,10 +109,13 @@ function getModuleList() {
     var $moduleStateCombobox = $('#ModuleStateCombobox');
     var $selectedUserId = $('#SelectedUserId');
     var $selectedProjectId = $('#SelectedProjectId');
-    var url = '/Modules/GetList?State=' + $moduleStateCombobox.val() + '&ProjectId=' + $selectedProjectId.val();
+    var url = '/Modules/GetList?State=' + $moduleStateCombobox.val();
 
     if ($selectedUserId.val() != -1) {
         url += '&MemberId=' + $selectedUserId.val();
+    }
+    if ($selectedProjectId.val() != -1) {
+        url += '&ProjectId=' + $selectedProjectId.val();
     }
 
     abp.ajax({

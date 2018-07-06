@@ -15,7 +15,8 @@
                     UpdateTargetId = "projectList",
                     InsertionMode = InsertionMode.Replace,
                     OnBegin = "beginPost('#editProject')",
-                    OnSuccess = "hideForm('#editProject')"
+                    OnSuccess = "hideForm('#editProject')",
+                    OnFailure = "errorPost(xhr, status, error,'#add')"
                 }))
                 {
                     @Html.AntiForgeryToken()

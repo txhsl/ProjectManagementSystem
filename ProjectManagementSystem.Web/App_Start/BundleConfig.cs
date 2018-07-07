@@ -7,6 +7,7 @@ namespace ProjectManagementSystem.Web
         public static void RegisterBundles(BundleCollection bundles)
         {
             bundles.IgnoreList.Clear();
+            BundleTable.EnableOptimizations = false;
 
             bundles.Add(
                 new StyleBundle("~/Bundles/account-vendor/css")

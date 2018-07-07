@@ -5,6 +5,7 @@ using Abp.Net.Mail.Smtp;
 using Abp.Notifications;
 using Abp.Threading;
 using AutoMapper;
+using FormCheck;
 using ProjectManagementSystem.Authorization;
 using ProjectManagementSystem.Authorization.Users;
 using ProjectManagementSystem.Modules;
@@ -12,6 +13,7 @@ using ProjectManagementSystem.Modules.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -25,6 +27,12 @@ namespace ProjectManagementSystem.Projects
         private readonly IRepository<User, long> _userRepository;
         private readonly ISmtpEmailSenderConfiguration _smtpEmialSenderConfig;
         private readonly INotificationPublisher _notificationPublisher;
+
+        [DllImport(@"../../../TimeString.dll", EntryPoint = "convert_t2s", SetLastError = true, CharSet = CharSet.Ansi, ExactSpelling = false, CallingConvention = CallingConvention.StdCall)]
+        extern static string convert_t2s(DateTime dateTime);
+
+        [DllImport(@"../../../TimeString.dll", EntryPoint = "convert_s2t", SetLastError = true, CharSet = CharSet.Ansi, ExactSpelling = false, CallingConvention = CallingConvention.StdCall)]
+        extern static DateTime convert_s2t(string dateTime);
 
         public ModuleAppService(IRepository<Module> moduleRepository, IRepository<Project> projectRepository,
             IRepository<User, long> userRepository, ISmtpEmailSenderConfiguration smtpEmialSenderConfigtion,
@@ -194,6 +202,33 @@ namespace ProjectManagementSystem.Projects
             SmtpEmailSender emailSender = new SmtpEmailSender(_smtpEmialSenderConfig);
             string message = "Be aware of you task module -- " + name + ", which is approaching its deliver time.";
             emailSender.Send("teumessian@qq.com", user.EmailAddress, "New Todo item", message);
+        }
+
+        public ModuleDto CheckForm(CreateModuleDto dto)
+        {
+            var form = new Form
+            {
+                name = dto.Name,
+                description = dto.Description,
+                techstack = dto.TechStack
+            };
+
+            var formChecker = new FormChecker(form, 32, 64, 32);
+            if (formChecker.Check())
+            {
+                return ObjectMapper.Map<ModuleDto>(dto);
+            }
+            else
+            {
+                var newForm = formChecker.Modify(form);
+                return new ModuleDto
+                {
+                    Name = newForm.name,
+                    Description = newForm.description,
+                    TechStack = newForm.techstack
+                };
+            }
+
         }
     }
 }

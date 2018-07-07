@@ -4,6 +4,7 @@ using ProjectManagementSystem.Authorization.Users;
 using ProjectManagementSystem.Modules;
 using ProjectManagementSystem.Modules.Dto;
 using ProjectManagementSystem.Projects;
+using ProjectManagementSystem.Projects.Dto;
 using ProjectManagementSystem.Users;
 using ProjectManagementSystem.Web.Models.Modules;
 using System;
@@ -92,7 +93,8 @@ namespace ProjectManagementSystem.Web.Controllers
             ViewBag.SelectedUserId = new SelectList(userFullList, "Id", "UserName", model.SelectedUserId);
 
             var projectList = _projectAppService.SearchProjects(new Projects.Dto.ProjectSearchInputDto { });
-            ViewBag.SelectedProjectId = new SelectList(projectList.Projects, "Id", "Name", model.SelectedProjectId);
+            var projectFullList = new List<ProjectDto> { new ProjectDto { Id = -1, Name = "All" } }.Concat<ProjectDto>(projectList.Projects);
+            ViewBag.SelectedProjectId = new SelectList(projectFullList, "Id", "Name", model.SelectedProjectId);
 
             return View(model);
         }

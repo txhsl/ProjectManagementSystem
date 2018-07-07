@@ -100,6 +100,6 @@
     <text name="DeliverDate">DeliverDate</text>
     <text name="Create Project">Create Project</text>
     <text name="Create Module">Create Module</text>
-    
+    <text name="Welcome">Welcome!</text>
   </texts>
 </localizationDictionary>

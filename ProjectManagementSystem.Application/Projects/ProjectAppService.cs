@@ -1,8 +1,10 @@
 ﻿using Abp.Authorization;
 using Abp.AutoMapper;
+using Abp.Dependency;
 using Abp.Domain.Repositories;
 using Abp.Net.Mail.Smtp;
 using Abp.Notifications;
+using Abp.Runtime.Session;
 using AutoMapper;
 using FormCheck;
 using ProjectManagementSystem.Authorization;
@@ -24,6 +26,7 @@ namespace ProjectManagementSystem.Projects
         private readonly IRepository<User, long> _userRepository;
         private readonly ISmtpEmailSenderConfiguration _smtpEmialSenderConfig;
         private readonly INotificationPublisher _notificationPublisher;
+        private readonly IAbpSession AbpSession;
 
         [DllImport(@"../../../TimeString.dll", EntryPoint = "convert_t2s", SetLastError = true, CharSet = CharSet.Ansi, ExactSpelling = false, CallingConvention = CallingConvention.StdCall)]
         extern static string convert_t2s(DateTime dateTime);
@@ -38,11 +41,19 @@ namespace ProjectManagementSystem.Projects
             _userRepository = userRepository;
             _smtpEmialSenderConfig = smtpEmialSenderConfigtion;
             _notificationPublisher = notificationPublisher;
+
+            AbpSession = NullAbpSession.Instance;
         }
 
         public ProjectSearchOutputDto SearchProjects(ProjectSearchInputDto input)
         {
             var query = _projectRepository.GetAll();
+
+            var currentTenant = AbpSession.TenantId;
+            if (currentTenant.HasValue)
+            {
+                query = query.Where(t => t.TenantId == currentTenant);
+            }
 
             if (input.TeamLeaderId.HasValue)
             {
@@ -74,6 +85,8 @@ namespace ProjectManagementSystem.Projects
 
             var project = new Project
             {
+                TenantId = AbpSession.TenantId,
+
                 Name = input.Name,
                 Description = input.Description,
                 StartTime = input.StartTime,

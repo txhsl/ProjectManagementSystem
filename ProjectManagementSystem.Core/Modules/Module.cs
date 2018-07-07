@@ -13,11 +13,13 @@ using System.Threading.Tasks;
 
 namespace ProjectManagementSystem.Modules
 {
-    public class Module : Entity, IHasCreationTime, IHasModificationTime
+    public class Module : Entity, IHasCreationTime, IHasModificationTime, IMayHaveTenant
     {
         public const int MaxNameLength = 32;
         public const int MaxDescriptionLength = 64;
         public const int MaxTechStackLength = 32;
+
+        public int? TenantId { get; set; }
 
         public int? ProjectId { get; set; }
 

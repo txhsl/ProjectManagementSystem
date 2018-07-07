@@ -23,7 +23,6 @@ namespace ProjectManagementSystem.Migrations.SeedData
         {
             _modules = new List<Module>()
             {
-                new Module("ABP BackEnd", "Use ABPZero to realize the bcakend of the system")
             };
         }
 

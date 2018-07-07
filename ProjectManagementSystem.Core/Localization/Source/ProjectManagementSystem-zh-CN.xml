@@ -82,5 +82,6 @@
 
     <text name="Edit">编辑</text>
     <text name="Delete">删除</text>
+    <text name="Welcome">欢迎使用！</text>
   </texts>
 </localizationDictionary>

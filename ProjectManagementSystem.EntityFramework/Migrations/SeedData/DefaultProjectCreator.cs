@@ -23,7 +23,6 @@ namespace ProjectManagementSystem.Migrations.SeedData
         {
             _projects = new List<Project>()
             {
-                new Project(".Net Course Design", "A project management system")
             };
         }
 

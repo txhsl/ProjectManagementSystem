@@ -5,7 +5,7 @@ namespace ProjectManagementSystem.Migrations
     using System.Data.Entity.Infrastructure.Annotations;
     using System.Data.Entity.Migrations;
     
-    public partial class Rebuild_On_Permissions : DbMigration
+    public partial class Modify_On_Tenant : DbMigration
     {
         public override void Up()
         {
@@ -148,6 +148,7 @@ namespace ProjectManagementSystem.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
+                        TenantId = c.Int(),
                         ProjectId = c.Int(),
                         MemberId = c.Long(),
                         Name = c.String(nullable: false, maxLength: 32, storeType: "nvarchar"),
@@ -159,7 +160,11 @@ namespace ProjectManagementSystem.Migrations
                         State = c.Byte(nullable: false),
                         CreationTime = c.DateTime(nullable: false, precision: 0),
                         LastModificationTime = c.DateTime(precision: 0),
-                    })
+                    },
+                annotations: new Dictionary<string, object>
+                {
+                    { "DynamicFilter_Module_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
+                })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.AbpUsers", t => t.MemberId)
                 .ForeignKey("dbo.Projects", t => t.ProjectId)
@@ -321,6 +326,7 @@ namespace ProjectManagementSystem.Migrations
                 c => new
                     {
                         Id = c.Int(nullable: false, identity: true),
+                        TenantId = c.Int(),
                         TeamLeaderId = c.Long(),
                         Name = c.String(nullable: false, maxLength: 32, storeType: "nvarchar"),
                         Description = c.String(nullable: false, maxLength: 64, storeType: "nvarchar"),
@@ -329,7 +335,11 @@ namespace ProjectManagementSystem.Migrations
                         State = c.Byte(nullable: false),
                         CreationTime = c.DateTime(nullable: false, precision: 0),
                         LastModificationTime = c.DateTime(precision: 0),
-                    })
+                    },
+                annotations: new Dictionary<string, object>
+                {
+                    { "DynamicFilter_Project_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
+                })
                 .PrimaryKey(t => t.Id)
                 .ForeignKey("dbo.AbpUsers", t => t.TeamLeaderId)
                 .Index(t => t.TeamLeaderId);
@@ -672,7 +682,11 @@ namespace ProjectManagementSystem.Migrations
                     { "DynamicFilter_NotificationSubscriptionInfo_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
                 });
             DropTable("dbo.AbpNotifications");
-            DropTable("dbo.Projects");
+            DropTable("dbo.Projects",
+                removedAnnotations: new Dictionary<string, object>
+                {
+                    { "DynamicFilter_Project_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
+                });
             DropTable("dbo.AbpSettings",
                 removedAnnotations: new Dictionary<string, object>
                 {
@@ -706,7 +720,11 @@ namespace ProjectManagementSystem.Migrations
                     { "DynamicFilter_User_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
                     { "DynamicFilter_User_SoftDelete", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
                 });
-            DropTable("dbo.Modules");
+            DropTable("dbo.Modules",
+                removedAnnotations: new Dictionary<string, object>
+                {
+                    { "DynamicFilter_Module_MayHaveTenant", "EntityFramework.DynamicFilters.DynamicFilterDefinition" },
+                });
             DropTable("dbo.AbpLanguageTexts",
                 removedAnnotations: new Dictionary<string, object>
                 {

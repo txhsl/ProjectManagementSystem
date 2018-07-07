@@ -12,10 +12,12 @@ using System.Threading.Tasks;
 
 namespace ProjectManagementSystem.Projects
 {
-    public class Project : Entity, IHasCreationTime, IHasModificationTime
+    public class Project : Entity, IHasCreationTime, IHasModificationTime, IMayHaveTenant
     {
         public const int MaxNameLength = 32;
         public const int MaxDescriptionLength = 64;
+
+        public int? TenantId { get; set; }
 
         public long? TeamLeaderId { get; set; }
 

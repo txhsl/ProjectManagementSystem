@@ -30,6 +30,8 @@ namespace ProjectManagementSystem.Migrations
                 //Default tenant seed (in host database).
                 new DefaultTenantCreator(context).Create();
                 new TenantRoleAndUserBuilder(context, 1).Create();
+                new TenantRoleAndUserBuilder(context, 2).Create();
+                new TenantRoleAndUserBuilder(context, 3).Create();
             }
             else
             {

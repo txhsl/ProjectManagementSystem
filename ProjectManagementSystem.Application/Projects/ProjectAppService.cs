@@ -26,7 +26,7 @@ namespace ProjectManagementSystem.Projects
         private readonly IRepository<User, long> _userRepository;
         private readonly ISmtpEmailSenderConfiguration _smtpEmialSenderConfig;
         private readonly INotificationPublisher _notificationPublisher;
-        private readonly IAbpSession AbpSession;
+        private readonly IAbpSession _abpSession;
 
         [DllImport(@"../../../TimeString.dll", EntryPoint = "convert_t2s", SetLastError = true, CharSet = CharSet.Ansi, ExactSpelling = false, CallingConvention = CallingConvention.StdCall)]
         extern static string convert_t2s(DateTime dateTime);
@@ -35,21 +35,22 @@ namespace ProjectManagementSystem.Projects
         extern static DateTime convert_s2t(string dateTime);
 
         public ProjectAppService(IRepository<Project> projectRepository, IRepository<User, long> userRepository,
-            ISmtpEmailSenderConfiguration smtpEmialSenderConfigtion, INotificationPublisher notificationPublisher)
+            ISmtpEmailSenderConfiguration smtpEmialSenderConfigtion, INotificationPublisher notificationPublisher,
+            IAbpSession abpSession)
         {
             _projectRepository = projectRepository;
             _userRepository = userRepository;
             _smtpEmialSenderConfig = smtpEmialSenderConfigtion;
             _notificationPublisher = notificationPublisher;
 
-            AbpSession = NullAbpSession.Instance;
+            _abpSession = abpSession;
         }
 
         public ProjectSearchOutputDto SearchProjects(ProjectSearchInputDto input)
         {
             var query = _projectRepository.GetAll();
 
-            var currentTenant = AbpSession.TenantId;
+            var currentTenant = _abpSession.TenantId;
             if (currentTenant.HasValue)
             {
                 query = query.Where(t => t.TenantId == currentTenant);
@@ -66,10 +67,13 @@ namespace ProjectManagementSystem.Projects
             }
 
             var list = query.ToList();
-            foreach(var project in list)
+            if (currentTenant != null)
             {
-                if(project.TeamLeaderId.HasValue)
-                    project.TeamLeader = _userRepository.Get(ObjectMapper.Map<long>(project.TeamLeaderId));
+                foreach (var project in list)
+                {
+                    if (project.TeamLeaderId.HasValue)
+                        project.TeamLeader = _userRepository.Get(ObjectMapper.Map<long>(project.TeamLeaderId));
+                }
             }
 
             return new ProjectSearchOutputDto
@@ -85,7 +89,7 @@ namespace ProjectManagementSystem.Projects
 
             var project = new Project
             {
-                TenantId = AbpSession.TenantId,
+                TenantId = _abpSession.TenantId,
 
                 Name = input.Name,
                 Description = input.Description,
@@ -176,6 +180,8 @@ namespace ProjectManagementSystem.Projects
         [AbpAuthorize(PermissionNames.Pages_Projects)]
         public void SendEmail(int teamLeaderId, string name)
         {
+            if(_abpSession.TenantId == null)
+                return;
             var user = _userRepository.Get(ObjectMapper.Map<long>(teamLeaderId));
 
             SmtpEmailSender emailSender = new SmtpEmailSender(_smtpEmialSenderConfig);

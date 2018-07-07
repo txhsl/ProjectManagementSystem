@@ -4110,3 +4110,666 @@ DEBUG 2018-07-07 23:48:58,597 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        -
 DEBUG 2018-07-07 23:48:59,019 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"d9ea72ac-c11e-4372-a208-4f9e01dd19ce","IpAddress":"192.168.1.103","TenantId":null,"UserId":1,"ConnectTime":"2018-07-07T23:48:59.0141057+08:00","Properties":{}}
 DEBUG 2018-07-07 23:48:59,037 [8    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: d9ea72ac-c11e-4372-a208-4f9e01dd19ce
 DEBUG 2018-07-07 23:49:05,814 [14   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: ea99ea09-b0ac-428d-9af2-89602a922be5
+DEBUG 2018-07-08 01:12:11,864 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-07-08 01:12:11,896 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2018-07-08 01:12:11,909 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.Web.ProjectManagementSystemWebModule, ProjectManagementSystem.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:11,914 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.ProjectManagementSystemDataModule, ProjectManagementSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:11,915 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:11,915 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:11,915 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:11,915 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:11,916 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:11,916 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:11,917 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.ProjectManagementSystemCoreModule, ProjectManagementSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:11,917 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.ProjectManagementSystemApplicationModule, ProjectManagementSystem.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:11,918 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:11,918 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.Api.ProjectManagementSystemWebApiModule, ProjectManagementSystem.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:11,918 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:11,918 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:11,918 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:11,919 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:11,919 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:11,927 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2018-07-08 01:12:12,455 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-08 01:12:12,456 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-08 01:12:12,456 [1    ] o.Configuration.LanguageManagementConfig - Converted ProjectManagementSystem (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-08 01:12:12,456 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-08 01:12:13,050 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: ProjectManagementSystem.EntityFramework.ProjectManagementSystemDbContext, ProjectManagementSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:16,139 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-07-08 01:12:16,212 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-07-08 01:12:16,229 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-07-08 01:12:16,240 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ProjectManagementSystem
+DEBUG 2018-07-08 01:12:16,246 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-07-08 01:12:16,364 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-07-08 01:12:16,447 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 17 classes define auto mapping attributes
+DEBUG 2018-07-08 01:12:16,447 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-07-08 01:12:16,455 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-07-08 01:12:16,455 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Users.Dto.CreateUserDto
+DEBUG 2018-07-08 01:12:16,456 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Users.Dto.UpdateUserDto
+DEBUG 2018-07-08 01:12:16,456 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Users.Dto.UserDto
+DEBUG 2018-07-08 01:12:16,456 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Roles.Dto.CreateRoleDto
+DEBUG 2018-07-08 01:12:16,456 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Roles.Dto.PermissionDto
+DEBUG 2018-07-08 01:12:16,456 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Roles.Dto.RoleDto
+DEBUG 2018-07-08 01:12:16,456 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-07-08 01:12:16,456 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.MultiTenancy.Dto.EditTenantDto
+DEBUG 2018-07-08 01:12:16,456 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.MultiTenancy.Dto.TenantDto
+DEBUG 2018-07-08 01:12:16,456 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Projects.Dto.CreateProjectDto
+DEBUG 2018-07-08 01:12:16,456 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Projects.Dto.UpdateProjectDto
+DEBUG 2018-07-08 01:12:16,456 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Modules.Dto.CreateModuleDto
+DEBUG 2018-07-08 01:12:16,456 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Modules.Dto.UpdateModuleDto
+DEBUG 2018-07-08 01:12:16,456 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Web.Models.Account.TenantChangeViewModel
+DEBUG 2018-07-08 01:12:16,456 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2018-07-08 01:12:57,117 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-07-08 01:12:57,149 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2018-07-08 01:12:57,159 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.Web.ProjectManagementSystemWebModule, ProjectManagementSystem.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:57,163 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.ProjectManagementSystemDataModule, ProjectManagementSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:57,164 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:57,164 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:57,165 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:57,165 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:57,166 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:57,166 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:57,166 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.ProjectManagementSystemCoreModule, ProjectManagementSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:57,166 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.ProjectManagementSystemApplicationModule, ProjectManagementSystem.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:57,167 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:57,167 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.Api.ProjectManagementSystemWebApiModule, ProjectManagementSystem.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:57,168 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:57,168 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:57,168 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:57,168 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:57,169 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:12:57,175 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2018-07-08 01:12:57,782 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-08 01:12:57,783 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-08 01:12:57,783 [1    ] o.Configuration.LanguageManagementConfig - Converted ProjectManagementSystem (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-08 01:12:57,783 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-08 01:12:58,299 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: ProjectManagementSystem.EntityFramework.ProjectManagementSystemDbContext, ProjectManagementSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:13:01,376 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-07-08 01:13:01,468 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-07-08 01:13:01,487 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-07-08 01:13:01,499 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ProjectManagementSystem
+DEBUG 2018-07-08 01:13:01,507 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-07-08 01:13:01,625 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-07-08 01:13:01,722 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 17 classes define auto mapping attributes
+DEBUG 2018-07-08 01:13:01,722 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-07-08 01:13:01,732 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-07-08 01:13:01,733 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Users.Dto.CreateUserDto
+DEBUG 2018-07-08 01:13:01,735 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Users.Dto.UpdateUserDto
+DEBUG 2018-07-08 01:13:01,735 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Users.Dto.UserDto
+DEBUG 2018-07-08 01:13:01,735 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Roles.Dto.CreateRoleDto
+DEBUG 2018-07-08 01:13:01,735 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Roles.Dto.PermissionDto
+DEBUG 2018-07-08 01:13:01,735 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Roles.Dto.RoleDto
+DEBUG 2018-07-08 01:13:01,736 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-07-08 01:13:01,736 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.MultiTenancy.Dto.EditTenantDto
+DEBUG 2018-07-08 01:13:01,736 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.MultiTenancy.Dto.TenantDto
+DEBUG 2018-07-08 01:13:01,736 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Projects.Dto.CreateProjectDto
+DEBUG 2018-07-08 01:13:01,736 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Projects.Dto.UpdateProjectDto
+DEBUG 2018-07-08 01:13:01,736 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Modules.Dto.CreateModuleDto
+DEBUG 2018-07-08 01:13:01,736 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Modules.Dto.UpdateModuleDto
+DEBUG 2018-07-08 01:13:01,736 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Web.Models.Account.TenantChangeViewModel
+DEBUG 2018-07-08 01:13:01,736 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2018-07-08 01:13:03,987 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2018-07-08 01:13:03,988 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2018-07-08 01:13:03,989 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2018-07-08 01:13:03,990 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2018-07-08 01:13:03,991 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2018-07-08 01:13:03,993 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2018-07-08 01:13:03,995 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Projects.IProjectAppService' with service name 'app/project'.
+DEBUG 2018-07-08 01:13:03,997 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Modules.IModuleAppService' with service name 'app/module'.
+WARN  2018-07-08 01:13:13,392 [9    ] Abp.Logging.LogHelper                    - Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   在 System.Threading.Tasks.Task.Execute()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   在 Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   在 Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   在 Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext)
+Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   在 System.Threading.Tasks.Task.Execute()
+--- 引发异常的上一位置中堆栈跟踪的末尾 ---
+   在 System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   在 System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   在 Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   在 Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   在 Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   在 Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext)
+DEBUG 2018-07-08 01:13:39,942 [8    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"15e84926-febf-4a07-89bc-93acc8a4d3ff","IpAddress":"192.168.1.103","TenantId":2,"UserId":3,"ConnectTime":"2018-07-08T01:13:39.9229625+08:00","Properties":{}}
+DEBUG 2018-07-08 01:13:40,029 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 15e84926-febf-4a07-89bc-93acc8a4d3ff
+DEBUG 2018-07-08 01:14:10,582 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 15e84926-febf-4a07-89bc-93acc8a4d3ff
+DEBUG 2018-07-08 01:14:11,127 [6    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"6919006f-722e-4531-883d-eb3717e4e1e7","IpAddress":"192.168.1.103","TenantId":2,"UserId":3,"ConnectTime":"2018-07-08T01:14:11.1167466+08:00","Properties":{}}
+DEBUG 2018-07-08 01:14:11,148 [8    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 6919006f-722e-4531-883d-eb3717e4e1e7
+INFO  2018-07-08 01:14:19,686 [5    ] agementSystem.Projects.ProjectAppService - Creating a project for input: ProjectManagementSystem.Projects.Dto.CreateProjectDto
+INFO  2018-07-08 01:14:41,310 [15   ] agementSystem.Projects.ProjectAppService - Creating a project for input: ProjectManagementSystem.Projects.Dto.CreateProjectDto
+DEBUG 2018-07-08 01:22:40,433 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-07-08 01:22:40,483 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2018-07-08 01:22:40,501 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.Web.ProjectManagementSystemWebModule, ProjectManagementSystem.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:22:40,506 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.ProjectManagementSystemDataModule, ProjectManagementSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:22:40,506 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:22:40,508 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:22:40,508 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:22:40,510 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:22:40,511 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:22:40,511 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:22:40,511 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.ProjectManagementSystemCoreModule, ProjectManagementSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:22:40,512 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.ProjectManagementSystemApplicationModule, ProjectManagementSystem.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:22:40,512 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:22:40,514 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.Api.ProjectManagementSystemWebApiModule, ProjectManagementSystem.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:22:40,514 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:22:40,514 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:22:40,514 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:22:40,514 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:22:40,515 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:22:40,521 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2018-07-08 01:22:41,152 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-08 01:22:41,152 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-08 01:22:41,152 [1    ] o.Configuration.LanguageManagementConfig - Converted ProjectManagementSystem (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-08 01:22:41,152 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-08 01:22:41,816 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: ProjectManagementSystem.EntityFramework.ProjectManagementSystemDbContext, ProjectManagementSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:22:45,312 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-07-08 01:22:45,400 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-07-08 01:22:45,420 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-07-08 01:22:45,432 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ProjectManagementSystem
+DEBUG 2018-07-08 01:22:45,439 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-07-08 01:22:45,536 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-07-08 01:22:45,650 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 17 classes define auto mapping attributes
+DEBUG 2018-07-08 01:22:45,650 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-07-08 01:22:45,657 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-07-08 01:22:45,657 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Users.Dto.CreateUserDto
+DEBUG 2018-07-08 01:22:45,658 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Users.Dto.UpdateUserDto
+DEBUG 2018-07-08 01:22:45,658 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Users.Dto.UserDto
+DEBUG 2018-07-08 01:22:45,658 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Roles.Dto.CreateRoleDto
+DEBUG 2018-07-08 01:22:45,658 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Roles.Dto.PermissionDto
+DEBUG 2018-07-08 01:22:45,658 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Roles.Dto.RoleDto
+DEBUG 2018-07-08 01:22:45,658 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-07-08 01:22:45,659 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.MultiTenancy.Dto.EditTenantDto
+DEBUG 2018-07-08 01:22:45,659 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.MultiTenancy.Dto.TenantDto
+DEBUG 2018-07-08 01:22:45,659 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Projects.Dto.CreateProjectDto
+DEBUG 2018-07-08 01:22:45,659 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Projects.Dto.UpdateProjectDto
+DEBUG 2018-07-08 01:22:45,659 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Modules.Dto.CreateModuleDto
+DEBUG 2018-07-08 01:22:45,659 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Modules.Dto.UpdateModuleDto
+DEBUG 2018-07-08 01:22:45,659 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Web.Models.Account.TenantChangeViewModel
+DEBUG 2018-07-08 01:22:45,659 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2018-07-08 01:22:47,980 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2018-07-08 01:22:47,982 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2018-07-08 01:22:47,983 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2018-07-08 01:22:47,984 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2018-07-08 01:22:47,985 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2018-07-08 01:22:47,988 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2018-07-08 01:22:47,991 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Projects.IProjectAppService' with service name 'app/project'.
+DEBUG 2018-07-08 01:22:47,994 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Modules.IModuleAppService' with service name 'app/module'.
+DEBUG 2018-07-08 01:23:10,761 [8    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"9bd32c9e-52b5-4fe8-8b1f-bfcbbfc01adb","IpAddress":"192.168.1.103","TenantId":2,"UserId":3,"ConnectTime":"2018-07-08T01:23:10.7376112+08:00","Properties":{}}
+DEBUG 2018-07-08 01:23:10,857 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 9bd32c9e-52b5-4fe8-8b1f-bfcbbfc01adb
+DEBUG 2018-07-08 01:23:26,860 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 9bd32c9e-52b5-4fe8-8b1f-bfcbbfc01adb
+DEBUG 2018-07-08 01:23:27,351 [6    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"12544b7b-84a1-4ab3-b31e-7aa64a1d517d","IpAddress":"192.168.1.103","TenantId":2,"UserId":3,"ConnectTime":"2018-07-08T01:23:27.343561+08:00","Properties":{}}
+DEBUG 2018-07-08 01:23:27,367 [6    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 12544b7b-84a1-4ab3-b31e-7aa64a1d517d
+INFO  2018-07-08 01:23:52,085 [13   ] agementSystem.Projects.ProjectAppService - Creating a project for input: ProjectManagementSystem.Projects.Dto.CreateProjectDto
+DEBUG 2018-07-08 01:24:37,289 [18   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"56e9c7eb-99d7-4d23-b0af-2228ce682bd7","IpAddress":"192.168.1.103","TenantId":null,"UserId":1,"ConnectTime":"2018-07-08T01:24:37.2815612+08:00","Properties":{}}
+DEBUG 2018-07-08 01:24:37,316 [18   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 56e9c7eb-99d7-4d23-b0af-2228ce682bd7
+DEBUG 2018-07-08 01:25:47,050 [18   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 12544b7b-84a1-4ab3-b31e-7aa64a1d517d
+DEBUG 2018-07-08 01:25:47,051 [18   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 56e9c7eb-99d7-4d23-b0af-2228ce682bd7
+DEBUG 2018-07-08 01:25:49,229 [13   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected (on reconnected event): {"ConnectionId":"56e9c7eb-99d7-4d23-b0af-2228ce682bd7","IpAddress":"192.168.1.103","TenantId":null,"UserId":1,"ConnectTime":"2018-07-08T01:25:49.2176757+08:00","Properties":{}}
+DEBUG 2018-07-08 01:25:49,254 [28   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is reconnected: {"ConnectionId":"56e9c7eb-99d7-4d23-b0af-2228ce682bd7","IpAddress":"192.168.1.103","TenantId":null,"UserId":1,"ConnectTime":"2018-07-08T01:25:49.2176757+08:00","Properties":{}}
+DEBUG 2018-07-08 01:25:49,314 [31   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is reconnected: {"ConnectionId":"56e9c7eb-99d7-4d23-b0af-2228ce682bd7","IpAddress":"192.168.1.103","TenantId":null,"UserId":1,"ConnectTime":"2018-07-08T01:25:49.2176757+08:00","Properties":{}}
+DEBUG 2018-07-08 01:25:49,332 [13   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is reconnected: {"ConnectionId":"56e9c7eb-99d7-4d23-b0af-2228ce682bd7","IpAddress":"192.168.1.103","TenantId":null,"UserId":1,"ConnectTime":"2018-07-08T01:25:49.2176757+08:00","Properties":{}}
+DEBUG 2018-07-08 01:25:49,340 [18   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is reconnected: {"ConnectionId":"56e9c7eb-99d7-4d23-b0af-2228ce682bd7","IpAddress":"192.168.1.103","TenantId":null,"UserId":1,"ConnectTime":"2018-07-08T01:25:49.2176757+08:00","Properties":{}}
+DEBUG 2018-07-08 01:25:49,356 [29   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is reconnected: {"ConnectionId":"56e9c7eb-99d7-4d23-b0af-2228ce682bd7","IpAddress":"192.168.1.103","TenantId":null,"UserId":1,"ConnectTime":"2018-07-08T01:25:49.2176757+08:00","Properties":{}}
+DEBUG 2018-07-08 01:25:49,430 [38   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"971a6631-bce1-4214-b5d2-544eedbb7064","IpAddress":"192.168.1.103","TenantId":null,"UserId":1,"ConnectTime":"2018-07-08T01:25:49.4046864+08:00","Properties":{}}
+ERROR 2018-07-08 01:25:49,451 [16   ] ystem.Web.Controllers.ProjectsController - There is no such an entity. Entity type: ProjectManagementSystem.Authorization.Users.User, id: 3
+Abp.Domain.Entities.EntityNotFoundException: There is no such an entity. Entity type: ProjectManagementSystem.Authorization.Users.User, id: 3
+   在 Abp.Domain.Repositories.AbpRepositoryBase`2.Get(TPrimaryKey id)
+   在 Castle.Proxies.Invocations.IRepository`2_Get_6.InvokeMethodOnTarget()
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options)
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Castle.Proxies.IRepository`2Proxy_4.Get(Int64 id)
+   在 ProjectManagementSystem.Projects.ProjectAppService.SearchProjects(ProjectSearchInputDto input) 位置 E:\大三_下\C#_.NET程序设计\期末项目\ProjectManagementSystem\src\ProjectManagementSystem.Application\Projects\ProjectAppService.cs:行号 73
+   在 Castle.Proxies.Invocations.IProjectAppService_SearchProjects.InvokeMethodOnTarget()
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Abp.Domain.Uow.UnitOfWorkInterceptor.PerformSyncUow(IInvocation invocation, UnitOfWorkOptions options)
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Abp.Auditing.AuditingInterceptor.PerformSyncAuditing(IInvocation invocation, AuditInfo auditInfo)
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Castle.DynamicProxy.AbstractInvocation.Proceed()
+   在 Castle.Proxies.ProjectAppServiceProxy.SearchProjects(ProjectSearchInputDto input)
+   在 ProjectManagementSystem.Web.Controllers.ProjectsController.Index(ProjectSearchInputDto input) 位置 E:\大三_下\C#_.NET程序设计\期末项目\ProjectManagementSystem\src\ProjectManagementSystem.Web\Controllers\ProjectsController.cs:行号 74
+   在 lambda_method(Closure , ControllerBase , Object[] )
+   在 System.Web.Mvc.ControllerActionInvoker.InvokeActionMethod(ControllerContext controllerContext, ActionDescriptor actionDescriptor, IDictionary`2 parameters)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c.<BeginInvokeSynchronousActionMethod>b__9_0(IAsyncResult asyncResult, ActionInvocation innerInvokeState)
+   在 System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`2.CallEndDelegate(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__11_0()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__3()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__5(IAsyncResult asyncResult)
+DEBUG 2018-07-08 01:25:49,671 [40   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 971a6631-bce1-4214-b5d2-544eedbb7064
+DEBUG 2018-07-08 01:25:50,185 [35   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"21cc9d90-e07d-41ce-9fd9-f5b77f8d8cf0","IpAddress":"192.168.1.103","TenantId":null,"UserId":1,"ConnectTime":"2018-07-08T01:25:50.1717303+08:00","Properties":{}}
+DEBUG 2018-07-08 01:25:50,220 [35   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 21cc9d90-e07d-41ce-9fd9-f5b77f8d8cf0
+DEBUG 2018-07-08 01:26:25,929 [40   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"f7a32729-f53d-483e-81b6-e0904453119c","IpAddress":"192.168.1.103","TenantId":3,"UserId":4,"ConnectTime":"2018-07-08T01:26:25.9257753+08:00","Properties":{}}
+DEBUG 2018-07-08 01:26:25,941 [38   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: f7a32729-f53d-483e-81b6-e0904453119c
+DEBUG 2018-07-08 01:26:27,049 [29   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 56e9c7eb-99d7-4d23-b0af-2228ce682bd7
+DEBUG 2018-07-08 01:26:28,726 [33   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: f7a32729-f53d-483e-81b6-e0904453119c
+DEBUG 2018-07-08 01:26:29,092 [33   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"9d9ac615-949c-4abb-97f2-384f27822f3b","IpAddress":"192.168.1.103","TenantId":3,"UserId":4,"ConnectTime":"2018-07-08T01:26:29.0829559+08:00","Properties":{}}
+DEBUG 2018-07-08 01:26:29,111 [33   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 9d9ac615-949c-4abb-97f2-384f27822f3b
+DEBUG 2018-07-08 01:26:32,063 [38   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 21cc9d90-e07d-41ce-9fd9-f5b77f8d8cf0
+DEBUG 2018-07-08 01:26:41,797 [38   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 9d9ac615-949c-4abb-97f2-384f27822f3b
+DEBUG 2018-07-08 01:26:42,474 [32   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"75731d11-f311-4327-89d3-081d71dbc9a3","IpAddress":"192.168.1.103","TenantId":3,"UserId":4,"ConnectTime":"2018-07-08T01:26:42.4667214+08:00","Properties":{}}
+DEBUG 2018-07-08 01:26:42,544 [38   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 75731d11-f311-4327-89d3-081d71dbc9a3
+DEBUG 2018-07-08 01:29:43,100 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-07-08 01:29:43,139 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2018-07-08 01:29:43,156 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.Web.ProjectManagementSystemWebModule, ProjectManagementSystem.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:29:43,163 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.ProjectManagementSystemDataModule, ProjectManagementSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:29:43,164 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:29:43,164 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:29:43,164 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:29:43,165 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:29:43,166 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:29:43,167 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:29:43,168 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.ProjectManagementSystemCoreModule, ProjectManagementSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:29:43,168 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.ProjectManagementSystemApplicationModule, ProjectManagementSystem.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:29:43,168 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:29:43,169 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.Api.ProjectManagementSystemWebApiModule, ProjectManagementSystem.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:29:43,169 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:29:43,169 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:29:43,170 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:29:43,170 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:29:43,170 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:29:43,188 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2018-07-08 01:29:43,933 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-08 01:29:43,933 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-08 01:29:43,933 [1    ] o.Configuration.LanguageManagementConfig - Converted ProjectManagementSystem (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-08 01:29:43,933 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-08 01:29:44,569 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: ProjectManagementSystem.EntityFramework.ProjectManagementSystemDbContext, ProjectManagementSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:29:48,110 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-07-08 01:29:48,196 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-07-08 01:29:48,218 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-07-08 01:29:48,231 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ProjectManagementSystem
+DEBUG 2018-07-08 01:29:48,236 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-07-08 01:29:48,368 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-07-08 01:29:48,466 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 17 classes define auto mapping attributes
+DEBUG 2018-07-08 01:29:48,466 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-07-08 01:29:48,477 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-07-08 01:29:48,477 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Users.Dto.CreateUserDto
+DEBUG 2018-07-08 01:29:48,479 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Users.Dto.UpdateUserDto
+DEBUG 2018-07-08 01:29:48,479 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Users.Dto.UserDto
+DEBUG 2018-07-08 01:29:48,479 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Roles.Dto.CreateRoleDto
+DEBUG 2018-07-08 01:29:48,479 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Roles.Dto.PermissionDto
+DEBUG 2018-07-08 01:29:48,480 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Roles.Dto.RoleDto
+DEBUG 2018-07-08 01:29:48,480 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-07-08 01:29:48,480 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.MultiTenancy.Dto.EditTenantDto
+DEBUG 2018-07-08 01:29:48,480 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.MultiTenancy.Dto.TenantDto
+DEBUG 2018-07-08 01:29:48,480 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Projects.Dto.CreateProjectDto
+DEBUG 2018-07-08 01:29:48,480 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Projects.Dto.UpdateProjectDto
+DEBUG 2018-07-08 01:29:48,480 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Modules.Dto.CreateModuleDto
+DEBUG 2018-07-08 01:29:48,480 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Modules.Dto.UpdateModuleDto
+DEBUG 2018-07-08 01:29:48,480 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Web.Models.Account.TenantChangeViewModel
+DEBUG 2018-07-08 01:29:48,480 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2018-07-08 01:29:51,188 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2018-07-08 01:29:51,189 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2018-07-08 01:29:51,191 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2018-07-08 01:29:51,193 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2018-07-08 01:29:51,195 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2018-07-08 01:29:51,197 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2018-07-08 01:29:51,198 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Projects.IProjectAppService' with service name 'app/project'.
+DEBUG 2018-07-08 01:29:51,199 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Modules.IModuleAppService' with service name 'app/module'.
+WARN  2018-07-08 01:30:01,013 [12   ] Abp.Logging.LogHelper                    - Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   at Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   at Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext)
+Abp.Authorization.AbpAuthorizationException: Current user did not login to the application!
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__19.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<CheckPermissions>d__22.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Abp.Authorization.AuthorizationHelper.<AuthorizeAsync>d__20.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at System.Threading.Tasks.Task.Execute()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.ExceptionServices.ExceptionDispatchInfo.Throw()
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at Nito.AsyncEx.Synchronous.TaskExtensions.WaitAndUnwrapException(Task task)
+   at Nito.AsyncEx.AsyncContext.Run(Func`1 action)
+   at Abp.Authorization.AuthorizationHelperExtensions.Authorize(IAuthorizationHelper authorizationHelper, MethodInfo methodInfo, Type type)
+   at Abp.Web.Mvc.Authorization.AbpMvcAuthorizeFilter.OnAuthorization(AuthorizationContext filterContext)
+DEBUG 2018-07-08 01:30:42,987 [12   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"f0780a06-eb93-4d88-9f16-1e9dbb0f299e","IpAddress":"192.168.1.103","TenantId":null,"UserId":1,"ConnectTime":"2018-07-08T01:30:42.9704774+08:00","Properties":{}}
+DEBUG 2018-07-08 01:30:43,068 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: f0780a06-eb93-4d88-9f16-1e9dbb0f299e
+DEBUG 2018-07-08 01:30:47,977 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: f0780a06-eb93-4d88-9f16-1e9dbb0f299e
+DEBUG 2018-07-08 01:30:48,783 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"e2e89c46-fdac-40cc-a445-45ff490410ea","IpAddress":"192.168.1.103","TenantId":null,"UserId":1,"ConnectTime":"2018-07-08T01:30:48.7778096+08:00","Properties":{}}
+DEBUG 2018-07-08 01:30:48,792 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: e2e89c46-fdac-40cc-a445-45ff490410ea
+DEBUG 2018-07-08 01:37:17,797 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-07-08 01:37:17,829 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2018-07-08 01:37:17,843 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.Web.ProjectManagementSystemWebModule, ProjectManagementSystem.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:37:17,846 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.ProjectManagementSystemDataModule, ProjectManagementSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:37:17,846 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:37:17,847 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:37:17,847 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:37:17,847 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:37:17,848 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:37:17,848 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:37:17,848 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.ProjectManagementSystemCoreModule, ProjectManagementSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:37:17,848 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.ProjectManagementSystemApplicationModule, ProjectManagementSystem.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:37:17,849 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:37:17,849 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.Api.ProjectManagementSystemWebApiModule, ProjectManagementSystem.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:37:17,849 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:37:17,849 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:37:17,849 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:37:17,849 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:37:17,850 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:37:17,857 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2018-07-08 01:37:18,398 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-08 01:37:18,399 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-08 01:37:18,399 [1    ] o.Configuration.LanguageManagementConfig - Converted ProjectManagementSystem (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-08 01:37:18,399 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-08 01:37:18,878 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: ProjectManagementSystem.EntityFramework.ProjectManagementSystemDbContext, ProjectManagementSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:37:22,050 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-07-08 01:37:22,146 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-07-08 01:37:22,164 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-07-08 01:37:22,176 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ProjectManagementSystem
+DEBUG 2018-07-08 01:37:22,183 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-07-08 01:37:22,264 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-07-08 01:37:22,349 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 17 classes define auto mapping attributes
+DEBUG 2018-07-08 01:37:22,349 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-07-08 01:37:22,356 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-07-08 01:37:22,356 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Users.Dto.CreateUserDto
+DEBUG 2018-07-08 01:37:22,357 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Users.Dto.UpdateUserDto
+DEBUG 2018-07-08 01:37:22,357 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Users.Dto.UserDto
+DEBUG 2018-07-08 01:37:22,357 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Roles.Dto.CreateRoleDto
+DEBUG 2018-07-08 01:37:22,357 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Roles.Dto.PermissionDto
+DEBUG 2018-07-08 01:37:22,357 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Roles.Dto.RoleDto
+DEBUG 2018-07-08 01:37:22,357 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-07-08 01:37:22,357 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.MultiTenancy.Dto.EditTenantDto
+DEBUG 2018-07-08 01:37:22,357 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.MultiTenancy.Dto.TenantDto
+DEBUG 2018-07-08 01:37:22,357 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Projects.Dto.CreateProjectDto
+DEBUG 2018-07-08 01:37:22,357 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Projects.Dto.UpdateProjectDto
+DEBUG 2018-07-08 01:37:22,357 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Modules.Dto.CreateModuleDto
+DEBUG 2018-07-08 01:37:22,357 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Modules.Dto.UpdateModuleDto
+DEBUG 2018-07-08 01:37:22,357 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Web.Models.Account.TenantChangeViewModel
+DEBUG 2018-07-08 01:37:22,357 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2018-07-08 01:37:24,291 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2018-07-08 01:37:24,293 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2018-07-08 01:37:24,294 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2018-07-08 01:37:24,297 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2018-07-08 01:37:24,299 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2018-07-08 01:37:24,300 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2018-07-08 01:37:24,303 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Projects.IProjectAppService' with service name 'app/project'.
+DEBUG 2018-07-08 01:37:24,306 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Modules.IModuleAppService' with service name 'app/module'.
+DEBUG 2018-07-08 01:37:32,620 [8    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"e1e53fa0-9efa-4eac-a914-7c02686011bd","IpAddress":"192.168.1.103","TenantId":null,"UserId":1,"ConnectTime":"2018-07-08T01:37:32.5949066+08:00","Properties":{}}
+ERROR 2018-07-08 01:37:59,869 [12   ] amework.ProjectManagementSystemDbContext - There are some validation errors while saving changes in EntityFramework:
+ERROR 2018-07-08 01:37:59,870 [12   ] amework.ProjectManagementSystemDbContext -  - UserName: UserName 字段是必需的。
+ERROR 2018-07-08 01:37:59,870 [12   ] amework.ProjectManagementSystemDbContext -  - EmailAddress: EmailAddress 字段是必需的。
+ERROR 2018-07-08 01:37:59,870 [12   ] amework.ProjectManagementSystemDbContext -  - Surname: Surname 字段是必需的。
+ERROR 2018-07-08 01:37:59,870 [12   ] amework.ProjectManagementSystemDbContext -  - Password: Password 字段是必需的。
+ERROR 2018-07-08 01:37:59,921 [12   ] ystem.Web.Controllers.ProjectsController - 对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+System.Data.Entity.Validation.DbEntityValidationException: 对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 Abp.EntityFramework.AbpDbContext.SaveChanges()
+   在 Abp.EntityFramework.Uow.EfUnitOfWork.SaveChanges()
+   在 Abp.EntityFramework.Uow.EfUnitOfWork.CompleteUow()
+   在 Abp.Domain.Uow.UnitOfWorkBase.Complete()
+   在 Abp.Web.Mvc.Uow.AbpMvcUowFilter.OnActionExecuted(ActionExecutedContext filterContext)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__3()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__5(IAsyncResult asyncResult)
+DEBUG 2018-07-08 01:38:01,489 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: e1e53fa0-9efa-4eac-a914-7c02686011bd
+DEBUG 2018-07-08 01:38:02,717 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"99ef7560-9acb-4c3b-bba5-d6be7bad2463","IpAddress":"192.168.1.103","TenantId":null,"UserId":1,"ConnectTime":"2018-07-08T01:38:02.7066289+08:00","Properties":{}}
+DEBUG 2018-07-08 01:38:02,899 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 99ef7560-9acb-4c3b-bba5-d6be7bad2463
+DEBUG 2018-07-08 01:40:37,312 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-07-08 01:40:37,354 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2018-07-08 01:40:37,369 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.Web.ProjectManagementSystemWebModule, ProjectManagementSystem.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:40:37,377 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.ProjectManagementSystemDataModule, ProjectManagementSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:40:37,377 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:40:37,378 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:40:37,378 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:40:37,379 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:40:37,380 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:40:37,381 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:40:37,381 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.ProjectManagementSystemCoreModule, ProjectManagementSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:40:37,381 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.ProjectManagementSystemApplicationModule, ProjectManagementSystem.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:40:37,381 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:40:37,381 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.Api.ProjectManagementSystemWebApiModule, ProjectManagementSystem.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:40:37,382 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:40:37,382 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:40:37,382 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:40:37,383 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:40:37,383 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:40:37,391 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2018-07-08 01:40:38,075 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-08 01:40:38,075 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-08 01:40:38,075 [1    ] o.Configuration.LanguageManagementConfig - Converted ProjectManagementSystem (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-08 01:40:38,075 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-08 01:40:38,638 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: ProjectManagementSystem.EntityFramework.ProjectManagementSystemDbContext, ProjectManagementSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:40:41,778 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-07-08 01:40:41,863 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-07-08 01:40:41,882 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-07-08 01:40:41,895 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ProjectManagementSystem
+DEBUG 2018-07-08 01:40:41,901 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-07-08 01:40:42,026 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-07-08 01:40:42,132 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 17 classes define auto mapping attributes
+DEBUG 2018-07-08 01:40:42,132 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-07-08 01:40:42,139 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-07-08 01:40:42,139 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Users.Dto.CreateUserDto
+DEBUG 2018-07-08 01:40:42,140 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Users.Dto.UpdateUserDto
+DEBUG 2018-07-08 01:40:42,141 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Users.Dto.UserDto
+DEBUG 2018-07-08 01:40:42,141 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Roles.Dto.CreateRoleDto
+DEBUG 2018-07-08 01:40:42,141 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Roles.Dto.PermissionDto
+DEBUG 2018-07-08 01:40:42,141 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Roles.Dto.RoleDto
+DEBUG 2018-07-08 01:40:42,141 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-07-08 01:40:42,141 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.MultiTenancy.Dto.EditTenantDto
+DEBUG 2018-07-08 01:40:42,141 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.MultiTenancy.Dto.TenantDto
+DEBUG 2018-07-08 01:40:42,141 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Projects.Dto.CreateProjectDto
+DEBUG 2018-07-08 01:40:42,141 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Projects.Dto.UpdateProjectDto
+DEBUG 2018-07-08 01:40:42,141 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Modules.Dto.CreateModuleDto
+DEBUG 2018-07-08 01:40:42,141 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Modules.Dto.UpdateModuleDto
+DEBUG 2018-07-08 01:40:42,141 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Web.Models.Account.TenantChangeViewModel
+DEBUG 2018-07-08 01:40:42,141 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2018-07-08 01:40:44,503 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2018-07-08 01:40:44,506 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2018-07-08 01:40:44,509 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2018-07-08 01:40:44,510 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2018-07-08 01:40:44,511 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2018-07-08 01:40:44,513 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2018-07-08 01:40:44,515 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Projects.IProjectAppService' with service name 'app/project'.
+DEBUG 2018-07-08 01:40:44,517 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Modules.IModuleAppService' with service name 'app/module'.
+DEBUG 2018-07-08 01:40:55,400 [12   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"33c0d710-c51b-4b41-b529-606604901f24","IpAddress":"192.168.1.103","TenantId":null,"UserId":1,"ConnectTime":"2018-07-08T01:40:55.3545038+08:00","Properties":{}}
+DEBUG 2018-07-08 01:41:07,426 [8    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"0cabcb83-58c7-442d-8d37-92e8f1bf87fa","IpAddress":"192.168.1.103","TenantId":null,"UserId":1,"ConnectTime":"2018-07-08T01:41:07.4151936+08:00","Properties":{}}
+DEBUG 2018-07-08 01:41:07,554 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 0cabcb83-58c7-442d-8d37-92e8f1bf87fa
+ERROR 2018-07-08 01:41:15,893 [8    ] amework.ProjectManagementSystemDbContext - There are some validation errors while saving changes in EntityFramework:
+ERROR 2018-07-08 01:41:15,894 [8    ] amework.ProjectManagementSystemDbContext -  - UserName: UserName 字段是必需的。
+ERROR 2018-07-08 01:41:15,895 [8    ] amework.ProjectManagementSystemDbContext -  - EmailAddress: EmailAddress 字段是必需的。
+ERROR 2018-07-08 01:41:15,895 [8    ] amework.ProjectManagementSystemDbContext -  - Surname: Surname 字段是必需的。
+ERROR 2018-07-08 01:41:15,895 [8    ] amework.ProjectManagementSystemDbContext -  - Password: Password 字段是必需的。
+ERROR 2018-07-08 01:41:15,939 [8    ] ystem.Web.Controllers.ProjectsController - 对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+System.Data.Entity.Validation.DbEntityValidationException: 对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 Abp.EntityFramework.AbpDbContext.SaveChanges()
+   在 Abp.EntityFramework.Uow.EfUnitOfWork.SaveChanges()
+   在 Abp.EntityFramework.Uow.EfUnitOfWork.CompleteUow()
+   在 Abp.Domain.Uow.UnitOfWorkBase.Complete()
+   在 Abp.Web.Mvc.Uow.AbpMvcUowFilter.OnActionExecuted(ActionExecutedContext filterContext)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__3()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__5(IAsyncResult asyncResult)
+DEBUG 2018-07-08 01:41:16,107 [9    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 0cabcb83-58c7-442d-8d37-92e8f1bf87fa
+DEBUG 2018-07-08 01:41:16,473 [8    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"8e736f71-2bcd-4f7f-b12c-3c452eeec259","IpAddress":"192.168.1.103","TenantId":null,"UserId":1,"ConnectTime":"2018-07-08T01:41:16.4637112+08:00","Properties":{}}
+DEBUG 2018-07-08 01:41:16,482 [12   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 8e736f71-2bcd-4f7f-b12c-3c452eeec259
+ERROR 2018-07-08 01:41:37,410 [8    ] amework.ProjectManagementSystemDbContext - There are some validation errors while saving changes in EntityFramework:
+ERROR 2018-07-08 01:41:37,410 [8    ] amework.ProjectManagementSystemDbContext -  - UserName: UserName 字段是必需的。
+ERROR 2018-07-08 01:41:37,410 [8    ] amework.ProjectManagementSystemDbContext -  - EmailAddress: EmailAddress 字段是必需的。
+ERROR 2018-07-08 01:41:37,410 [8    ] amework.ProjectManagementSystemDbContext -  - Surname: Surname 字段是必需的。
+ERROR 2018-07-08 01:41:37,410 [8    ] amework.ProjectManagementSystemDbContext -  - Password: Password 字段是必需的。
+ERROR 2018-07-08 01:41:37,428 [8    ] ystem.Web.Controllers.ProjectsController - 对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+System.Data.Entity.Validation.DbEntityValidationException: 对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 Abp.EntityFramework.AbpDbContext.SaveChanges()
+   在 Abp.EntityFramework.Uow.EfUnitOfWork.SaveChanges()
+   在 Abp.EntityFramework.Uow.EfUnitOfWork.CompleteUow()
+   在 Abp.Domain.Uow.UnitOfWorkBase.Complete()
+   在 Abp.Web.Mvc.Uow.AbpMvcUowFilter.OnActionExecuted(ActionExecutedContext filterContext)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__3()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__5(IAsyncResult asyncResult)
+DEBUG 2018-07-08 01:41:37,509 [8    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 8e736f71-2bcd-4f7f-b12c-3c452eeec259
+DEBUG 2018-07-08 01:41:38,554 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"cb709ced-6a4c-4472-8adc-4df87309c4ba","IpAddress":"192.168.1.103","TenantId":null,"UserId":1,"ConnectTime":"2018-07-08T01:41:38.541974+08:00","Properties":{}}
+DEBUG 2018-07-08 01:41:38,623 [12   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: cb709ced-6a4c-4472-8adc-4df87309c4ba
+ERROR 2018-07-08 01:42:04,112 [9    ] amework.ProjectManagementSystemDbContext - There are some validation errors while saving changes in EntityFramework:
+ERROR 2018-07-08 01:42:04,112 [9    ] amework.ProjectManagementSystemDbContext -  - UserName: UserName 字段是必需的。
+ERROR 2018-07-08 01:42:04,112 [9    ] amework.ProjectManagementSystemDbContext -  - EmailAddress: EmailAddress 字段是必需的。
+ERROR 2018-07-08 01:42:04,112 [9    ] amework.ProjectManagementSystemDbContext -  - Surname: Surname 字段是必需的。
+ERROR 2018-07-08 01:42:04,112 [9    ] amework.ProjectManagementSystemDbContext -  - Password: Password 字段是必需的。
+ERROR 2018-07-08 01:42:04,138 [9    ] ystem.Web.Controllers.ProjectsController - 对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+System.Data.Entity.Validation.DbEntityValidationException: 对一个或多个实体的验证失败。有关详细信息，请参阅“EntityValidationErrors”属性。
+   在 System.Data.Entity.Internal.InternalContext.SaveChanges()
+   在 Abp.EntityFramework.AbpDbContext.SaveChanges()
+   在 Abp.EntityFramework.Uow.EfUnitOfWork.SaveChanges()
+   在 Abp.EntityFramework.Uow.EfUnitOfWork.CompleteUow()
+   在 Abp.Domain.Uow.UnitOfWorkBase.Complete()
+   在 Abp.Web.Mvc.Uow.AbpMvcUowFilter.OnActionExecuted(ActionExecutedContext filterContext)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass11_1.<InvokeActionMethodFilterAsynchronouslyRecursive>b__2()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_6.<BeginInvokeAction>b__3()
+   在 System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass3_1.<BeginInvokeAction>b__5(IAsyncResult asyncResult)
+DEBUG 2018-07-08 01:42:04,268 [15   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: cb709ced-6a4c-4472-8adc-4df87309c4ba
+DEBUG 2018-07-08 01:42:05,211 [15   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"b69aa04c-ec4f-4e50-b7e0-86bb2aca5071","IpAddress":"192.168.1.103","TenantId":null,"UserId":1,"ConnectTime":"2018-07-08T01:42:05.2034989+08:00","Properties":{}}
+DEBUG 2018-07-08 01:42:05,268 [10   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: b69aa04c-ec4f-4e50-b7e0-86bb2aca5071
+DEBUG 2018-07-08 01:44:43,046 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2018-07-08 01:44:43,078 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2018-07-08 01:44:43,087 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.Web.ProjectManagementSystemWebModule, ProjectManagementSystem.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:44:43,091 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.ProjectManagementSystemDataModule, ProjectManagementSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:44:43,092 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:44:43,092 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:44:43,092 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCommonModule, Abp.Zero.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:44:43,092 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:44:43,093 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:44:43,093 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkCommonModule, Abp.EntityFramework.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:44:43,094 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.ProjectManagementSystemCoreModule, ProjectManagementSystem.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:44:43,094 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.ProjectManagementSystemApplicationModule, ProjectManagementSystem.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:44:43,094 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:44:43,094 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: ProjectManagementSystem.Api.ProjectManagementSystemWebApiModule, ProjectManagementSystem.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:44:43,094 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:44:43,094 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:44:43,095 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebCommonModule, Abp.Web.Common, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:44:43,095 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.SignalR.AbpWebSignalRModule, Abp.Web.SignalR, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:44:43,095 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=3.6.1.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:44:43,100 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2018-07-08 01:44:43,663 [1    ] o.Configuration.LanguageManagementConfig - Converted Abp (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-08 01:44:43,663 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpZero (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-08 01:44:43,663 [1    ] o.Configuration.LanguageManagementConfig - Converted ProjectManagementSystem (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-08 01:44:43,663 [1    ] o.Configuration.LanguageManagementConfig - Converted AbpWeb (Abp.Localization.Dictionaries.DictionaryBasedLocalizationSource) to MultiTenantLocalizationSource
+DEBUG 2018-07-08 01:44:44,197 [1    ] EntityFramework.AbpEntityFrameworkModule - Registering DbContext: ProjectManagementSystem.EntityFramework.ProjectManagementSystemDbContext, ProjectManagementSystem.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2018-07-08 01:44:47,288 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2018-07-08 01:44:47,370 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2018-07-08 01:44:47,395 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2018-07-08 01:44:47,409 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: ProjectManagementSystem
+DEBUG 2018-07-08 01:44:47,416 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2018-07-08 01:44:47,530 [1    ] Abp.BackgroundJobs.BackgroundJobManager  - Start background worker: Abp.BackgroundJobs.BackgroundJobManager
+DEBUG 2018-07-08 01:44:47,651 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 17 classes define auto mapping attributes
+DEBUG 2018-07-08 01:44:47,651 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2018-07-08 01:44:47,661 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Sessions.Dto.UserLoginInfoDto
+DEBUG 2018-07-08 01:44:47,661 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Users.Dto.CreateUserDto
+DEBUG 2018-07-08 01:44:47,662 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Users.Dto.UpdateUserDto
+DEBUG 2018-07-08 01:44:47,662 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Users.Dto.UserDto
+DEBUG 2018-07-08 01:44:47,662 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Roles.Dto.CreateRoleDto
+DEBUG 2018-07-08 01:44:47,662 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Roles.Dto.PermissionDto
+DEBUG 2018-07-08 01:44:47,662 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Roles.Dto.RoleDto
+DEBUG 2018-07-08 01:44:47,662 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.MultiTenancy.Dto.CreateTenantDto
+DEBUG 2018-07-08 01:44:47,662 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.MultiTenancy.Dto.EditTenantDto
+DEBUG 2018-07-08 01:44:47,663 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.MultiTenancy.Dto.TenantDto
+DEBUG 2018-07-08 01:44:47,663 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Projects.Dto.CreateProjectDto
+DEBUG 2018-07-08 01:44:47,663 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Projects.Dto.UpdateProjectDto
+DEBUG 2018-07-08 01:44:47,663 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Modules.Dto.CreateModuleDto
+DEBUG 2018-07-08 01:44:47,663 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Modules.Dto.UpdateModuleDto
+DEBUG 2018-07-08 01:44:47,663 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Web.Models.Account.TenantChangeViewModel
+DEBUG 2018-07-08 01:44:47,663 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - ProjectManagementSystem.Web.Models.Account.TenantSelectionViewModel+TenantInfo
+DEBUG 2018-07-08 01:44:49,840 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2018-07-08 01:44:49,841 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Users.IUserAppService' with service name 'app/user'.
+DEBUG 2018-07-08 01:44:49,844 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Roles.IRoleAppService' with service name 'app/role'.
+DEBUG 2018-07-08 01:44:49,846 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.MultiTenancy.ITenantAppService' with service name 'app/tenant'.
+DEBUG 2018-07-08 01:44:49,847 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Configuration.IConfigurationAppService' with service name 'app/configuration'.
+DEBUG 2018-07-08 01:44:49,849 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Authorization.Accounts.IAccountAppService' with service name 'app/account'.
+DEBUG 2018-07-08 01:44:49,853 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Projects.IProjectAppService' with service name 'app/project'.
+DEBUG 2018-07-08 01:44:49,855 [1    ] Abp.Logging.LogHelper                    - Dynamic web api controller is created for type 'ProjectManagementSystem.Modules.IModuleAppService' with service name 'app/module'.
+DEBUG 2018-07-08 01:45:12,936 [6    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"9628b6c3-e0cb-44de-a3ab-322eda078977","IpAddress":"192.168.1.103","TenantId":null,"UserId":1,"ConnectTime":"2018-07-08T01:45:12.9182356+08:00","Properties":{}}
+DEBUG 2018-07-08 01:45:13,129 [12   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 9628b6c3-e0cb-44de-a3ab-322eda078977
+DEBUG 2018-07-08 01:45:21,954 [7    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 9628b6c3-e0cb-44de-a3ab-322eda078977
+DEBUG 2018-07-08 01:45:22,385 [12   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"87ccd58b-7b14-44e4-8436-6fc0cf16cd79","IpAddress":"192.168.1.103","TenantId":null,"UserId":1,"ConnectTime":"2018-07-08T01:45:22.3767766+08:00","Properties":{}}
+DEBUG 2018-07-08 01:45:22,397 [6    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 87ccd58b-7b14-44e4-8436-6fc0cf16cd79
+DEBUG 2018-07-08 01:45:30,641 [6    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 87ccd58b-7b14-44e4-8436-6fc0cf16cd79
+DEBUG 2018-07-08 01:45:31,073 [5    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"83f28449-7264-44d5-9333-e72c5be6d5df","IpAddress":"192.168.1.103","TenantId":null,"UserId":1,"ConnectTime":"2018-07-08T01:45:31.0582731+08:00","Properties":{}}
+DEBUG 2018-07-08 01:45:31,088 [6    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 83f28449-7264-44d5-9333-e72c5be6d5df
+DEBUG 2018-07-08 01:45:36,333 [14   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 83f28449-7264-44d5-9333-e72c5be6d5df
+DEBUG 2018-07-08 01:45:36,749 [6    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"6ddf7539-d1d3-4b8f-a927-109f82d05cd2","IpAddress":"192.168.1.103","TenantId":null,"UserId":1,"ConnectTime":"2018-07-08T01:45:36.7415982+08:00","Properties":{}}
+DEBUG 2018-07-08 01:45:36,770 [13   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 6ddf7539-d1d3-4b8f-a927-109f82d05cd2
+DEBUG 2018-07-08 01:45:38,640 [6    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is disconnected: 6ddf7539-d1d3-4b8f-a927-109f82d05cd2
+DEBUG 2018-07-08 01:45:38,980 [12   ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is connected: {"ConnectionId":"0be5c334-7b27-4c12-8ec4-ea33a5804ca2","IpAddress":"192.168.1.103","TenantId":null,"UserId":1,"ConnectTime":"2018-07-08T01:45:38.9677255+08:00","Properties":{}}
+DEBUG 2018-07-08 01:45:39,000 [6    ] Abp.Web.SignalR.Hubs.AbpCommonHub        - A client is registered: 0be5c334-7b27-4c12-8ec4-ea33a5804ca2

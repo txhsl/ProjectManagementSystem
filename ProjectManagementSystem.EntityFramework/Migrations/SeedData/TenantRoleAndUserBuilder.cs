@@ -66,7 +66,7 @@ namespace ProjectManagementSystem.Migrations.SeedData
             var leaderRoleForHost = _context.Roles.FirstOrDefault(r => r.TenantId == _tenantId && r.Name == StaticRoleNames.Host.TeamLeader);
             if (leaderRoleForHost == null)
             {
-                leaderRoleForHost = _context.Roles.Add(new Role { Name = StaticRoleNames.Host.TeamLeader, DisplayName = StaticRoleNames.Host.TeamLeader, IsStatic = true });
+                leaderRoleForHost = _context.Roles.Add(new Role { TenantId = _tenantId, Name = StaticRoleNames.Host.TeamLeader, DisplayName = StaticRoleNames.Host.TeamLeader, IsStatic = true });
                 _context.SaveChanges();
 
                 //Grant all tenant permissions
@@ -106,7 +106,7 @@ namespace ProjectManagementSystem.Migrations.SeedData
             var memberRoleForHost = _context.Roles.FirstOrDefault(r => r.TenantId == _tenantId && r.Name == StaticRoleNames.Host.Member);
             if (memberRoleForHost == null)
             {
-                memberRoleForHost = _context.Roles.Add(new Role { Name = StaticRoleNames.Host.Member, DisplayName = StaticRoleNames.Host.Member, IsStatic = true });
+                memberRoleForHost = _context.Roles.Add(new Role { TenantId = _tenantId, Name = StaticRoleNames.Host.Member, DisplayName = StaticRoleNames.Host.Member, IsStatic = true });
                 _context.SaveChanges();
 
                 //Grant all tenant permissions

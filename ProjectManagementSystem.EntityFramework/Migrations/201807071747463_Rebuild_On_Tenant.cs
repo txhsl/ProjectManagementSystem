@@ -5,7 +5,7 @@ namespace ProjectManagementSystem.Migrations
     using System.Data.Entity.Infrastructure.Annotations;
     using System.Data.Entity.Migrations;
     
-    public partial class Modify_On_Tenant : DbMigration
+    public partial class Rebuild_On_Tenant : DbMigration
     {
         public override void Up()
         {
